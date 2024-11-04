@@ -9,6 +9,12 @@ import UIKit
 
 class StatisticsViewController: UIViewController {
 
+    @IBOutlet weak var jobsLabel: UILabel!
+    @IBOutlet weak var recentDateLabel: UILabel!
+    @IBOutlet weak var fuelGradeLabel: UILabel!
+    @IBOutlet weak var odometerLabel: UILabel!
+    @IBOutlet weak var lastOilChangeOdometerLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
