@@ -21,15 +21,25 @@ class StatisticsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidAppear(_ animated: Bool) {
+        
+        jobsLabel.text = "\(AppData.currentCar.jobs.count) Jobs"
+        
+        if AppData.currentCar.jobs.count > 0 {
+            
+            let x = AppData.currentCar.jobs[AppData.currentCar.jobs.count-1]
+            recentDateLabel.text = "\(x.dateM)/\(x.dateD)/\(x.dateY)"
+            
+        }
+        else{
+            
+            recentDateLabel.text = "Unavailable"
+            
+        }
+        fuelGradeLabel.text = AppData.currentCar.fuelGrade
+        odometerLabel.text = "\(AppData.currentCar.miles)"
+        lastOilChangeOdometerLabel.text = "Not functional yet"
+        
     }
-    */
 
 }

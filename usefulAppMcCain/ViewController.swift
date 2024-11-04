@@ -34,9 +34,9 @@ class Car {
     var year : String
     var jobs : [Jobs]
     var miles : Int
-    var fuelGrade : Int
+    var fuelGrade : String
     
-    init(make: String, model: String, year: String, miles: Int, fuelGrade: Int) {
+    init(make: String, model: String, year: String, miles: Int, fuelGrade: String) {
         self.make = make
         self.model = model
         self.year = year
@@ -49,7 +49,7 @@ class Car {
 
 public class AppData {
     
-    static var cars = [Car(make: "Cadillac", model: "CTS", year: "2004", miles: 131907, fuelGrade: 2)]
+    static var cars = [Car(make: "Cadillac", model: "CTS", year: "2004", miles: 131907, fuelGrade: "Premium")]
     static var currentCar = cars[0]
     
 }
