@@ -22,6 +22,7 @@ class CarViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     }
     override func viewDidAppear(_ animated: Bool) {
         
+        tableView.reloadData()
         if AppData.currentCar.jobs.count > 0{
             
             recentJobsLabel.text = "Recent Jobs"

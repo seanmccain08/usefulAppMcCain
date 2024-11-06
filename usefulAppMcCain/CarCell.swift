@@ -23,3 +23,11 @@ class CarCell2 : UITableViewCell {
     @IBOutlet weak var descriptionLabel: UILabel!
     
 }
+
+class CarCell3 : UITableViewCell {
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
+}

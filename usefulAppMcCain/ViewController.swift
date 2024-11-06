@@ -15,14 +15,16 @@ class Jobs {
     var dateD : Int
     var dateY : Int
     var odometer: Int
+    var isOilChange : Bool
     
-    init(title: String, description: String, dateM: Int, dateD: Int, dateY: Int, odometer: Int) {
+    init(title: String, description: String, dateM: Int, dateD: Int, dateY: Int, odometer: Int, isOilChange: Bool) {
         self.title = title
         self.description = description
         self.dateM = dateM
         self.dateD = dateD
         self.dateY = dateY
         self.odometer = odometer
+        self.isOilChange = isOilChange
     }
     
 }
@@ -35,6 +37,7 @@ class Car {
     var jobs : [Jobs]
     var miles : Int
     var fuelGrade : String
+    var oilMiles : Int
     
     init(make: String, model: String, year: String, miles: Int, fuelGrade: String) {
         self.make = make
@@ -43,6 +46,7 @@ class Car {
         self.jobs = []
         self.miles = miles
         self.fuelGrade = fuelGrade
+        self.oilMiles = 0
     }
     
 }

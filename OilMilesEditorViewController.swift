@@ -20,7 +20,11 @@ class OilMilesEditorViewController: UIViewController {
 
     @IBAction func updateOilMiles(_ sender: Any) {
         
-        
+        if oilMilesField.text != ""{
+            
+            AppData.currentCar.oilMiles = Int(oilMilesField.text!)!
+            
+        }
         
     }
     /*
