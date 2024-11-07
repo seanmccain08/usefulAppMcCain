@@ -13,18 +13,33 @@ class CarViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     @IBOutlet weak var recentJobsLabel: UILabel!
     @IBOutlet weak var carLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var odometerLabel: UILabel!
+    @IBOutlet weak var oilMilesLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         carLabel.text = "\(AppData.currentCar.make) \(AppData.currentCar.model)"
+        tableView.delegate = self
+        tableView.dataSource = self
         
     }
     override func viewDidAppear(_ animated: Bool) {
         
-        tableView.reloadData()
+        odometerLabel.text = "Odometer:\n\(AppData.currentCar.miles) Miles"
+        if AppData.currentCar.oilMiles == 0{
+            
+            oilMilesLabel.text = "Last oil change:\nNever"
+            
+        }
+        else{
+            
+            oilMilesLabel.text = "Last oil change:\n\(AppData.currentCar.oilMiles) Miles"
+            
+        }
         if AppData.currentCar.jobs.count > 0{
             
+            jobs0 = []
             recentJobsLabel.text = "Recent Jobs"
             if AppData.currentCar.jobs.count > 2{
                 
@@ -51,6 +66,7 @@ class CarViewController: UIViewController, UITableViewDelegate, UITableViewDataS
             recentJobsLabel.text = "No jobs to display"
             
         }
+        tableView.reloadData()
         
     }
     

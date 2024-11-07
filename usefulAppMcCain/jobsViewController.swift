@@ -43,6 +43,13 @@ class jobsViewController: UIViewController, UITableViewDelegate, UITableViewData
         
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        self.performSegue(withIdentifier: "jobDetailSegue", sender: self)
+        AppData.number = indexPath.row
+        
+    }
+    
     @IBAction func addButton(_ sender: Any) {
         
         self.performSegue(withIdentifier: "newJobSegue", sender: self)

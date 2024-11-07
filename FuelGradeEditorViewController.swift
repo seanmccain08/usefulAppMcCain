@@ -10,7 +10,8 @@ import UIKit
 class FuelGradeEditorViewController: UIViewController {
 
     @IBOutlet weak var fuelGradeOutlet: UITextField!
-    
+    @IBOutlet weak var odometerField: UITextField!
+    @IBOutlet weak var oilMilesField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,24 +19,27 @@ class FuelGradeEditorViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func updateFuelGrade(_ sender: Any) {
+    @IBAction func updateInfo(_ sender: Any) {
         
         if fuelGradeOutlet.text != ""{
             
             AppData.currentCar.fuelGrade = fuelGradeOutlet.text!
+            fuelGradeOutlet.text = ""
+            
+        }
+        if odometerField.text != ""{
+            
+            AppData.currentCar.miles = Int(odometerField.text!)!
+            odometerField.text = ""
+            
+        }
+        if oilMilesField.text != ""{
+            
+            AppData.currentCar.oilMiles = Int(oilMilesField.text!)!
+            oilMilesField.text = ""
             
         }
         
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

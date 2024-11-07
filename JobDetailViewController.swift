@@ -9,10 +9,23 @@ import UIKit
 
 class JobDetailViewController: UIViewController {
 
+    var currentJob = Jobs(title: "", description: "", dateM: 1, dateD: 1, dateY: 1, odometer: 1, isOilChange: false, price: 0.0)
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var odometerReadingLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        currentJob = AppData.currentCar.jobs[AppData.number]
+        titleLabel.text = currentJob.title
+        dateLabel.text = "\(currentJob.dateM)/\(currentJob.dateD)/\(currentJob.dateY)"
+        odometerReadingLabel.text = "Odometer Reading: \(currentJob.odometer) Miles"
+        descriptionLabel.text = currentJob.description
+        priceLabel.text = "Price: $\(currentJob.price)"
+        
     }
     
 

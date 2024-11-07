@@ -32,6 +32,8 @@ class AddViewController: UIViewController {
             makeField.text = ""
             modelField.text = ""
             yearField.text = ""
+            milesField.text = ""
+            fuelGradeField.text = ""
             
         }
         else{

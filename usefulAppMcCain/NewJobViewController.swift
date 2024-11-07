@@ -16,6 +16,7 @@ class NewJobViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var monthField: UITextField!
     @IBOutlet weak var dayField: UITextField!
     @IBOutlet weak var yearField: UITextField!
+    @IBOutlet weak var priceField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,9 +44,17 @@ class NewJobViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func addButton(_ sender: Any) {
         
-        if titleField.text != "" && odometerField.text != "" && descriptionField.text != "" && monthField.text != "" && dayField.text != "" && yearField.text != ""{
+        if titleField.text != "" && odometerField.text != "" && descriptionField.text != "" && monthField.text != "" && dayField.text != "" && yearField.text != "" && priceField.text != ""{
             
-            AppData.currentCar.jobs.append(Jobs(title: titleField.text!, description: descriptionField.text!, dateM: Int(monthField.text!)!, dateD: Int(dayField.text!)!, dateY: Int(yearField.text!)!, odometer: Int(odometerField.text!)!, isOilChange: oilSwitch.isOn))
+            AppData.currentCar.jobs.append(Jobs(title: titleField.text!, description: descriptionField.text!, dateM: Int(monthField.text!)!, dateD: Int(dayField.text!)!, dateY: Int(yearField.text!)!, odometer: Int(odometerField.text!)!, isOilChange: oilSwitch.isOn, price: Double(priceField.text!)!))
+            
+            if oilSwitch.isOn{
+                
+                AppData.currentCar.oilMiles = Int(odometerField.text!)!
+                
+            }
+            
+            AppData.currentCar.miles = Int(odometerField.text!)!
             
             titleField.text = ""
             odometerField.text = ""
@@ -53,6 +62,7 @@ class NewJobViewController: UIViewController, UITextFieldDelegate {
             monthField.text = ""
             dayField.text = ""
             yearField.text = ""
+            priceField.text = ""
             
         }
         

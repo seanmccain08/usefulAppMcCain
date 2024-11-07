@@ -16,8 +16,9 @@ class Jobs {
     var dateY : Int
     var odometer: Int
     var isOilChange : Bool
+    var price : Double
     
-    init(title: String, description: String, dateM: Int, dateD: Int, dateY: Int, odometer: Int, isOilChange: Bool) {
+    init(title: String, description: String, dateM: Int, dateD: Int, dateY: Int, odometer: Int, isOilChange: Bool, price : Double) {
         self.title = title
         self.description = description
         self.dateM = dateM
@@ -25,6 +26,7 @@ class Jobs {
         self.dateY = dateY
         self.odometer = odometer
         self.isOilChange = isOilChange
+        self.price = price
     }
     
 }
@@ -55,6 +57,7 @@ public class AppData {
     
     static var cars = [Car(make: "Cadillac", model: "CTS", year: "2004", miles: 131907, fuelGrade: "Premium")]
     static var currentCar = cars[0]
+    static var number = 0
     
 }
 

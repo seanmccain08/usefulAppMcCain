@@ -10,6 +10,7 @@
 		E782FE7C2CD928D700C88A75 /* FuelGradeEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E782FE7B2CD928D700C88A75 /* FuelGradeEditorViewController.swift */; };
 		E782FE7E2CD92A7F00C88A75 /* OdometerEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E782FE7D2CD92A7F00C88A75 /* OdometerEditorViewController.swift */; };
 		E782FE802CD92B4900C88A75 /* OilMilesEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E782FE7F2CD92B4900C88A75 /* OilMilesEditorViewController.swift */; };
+		E7CB85FA2CDBABE4001A1684 /* JobDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CB85F92CDBABE4001A1684 /* JobDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		E79DDDBF2CD2600100D8ECA7 /* usefulAppMcCain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = usefulAppMcCain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E79DDDD82CD2600300D8ECA7 /* usefulAppMcCainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = usefulAppMcCainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E79DDDE22CD2600300D8ECA7 /* usefulAppMcCainUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = usefulAppMcCainUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7CB85F92CDBABE4001A1684 /* JobDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -97,6 +99,7 @@
 		E79DDDB62CD2600100D8ECA7 = {
 			isa = PBXGroup;
 			children = (
+				E7CB85F92CDBABE4001A1684 /* JobDetailViewController.swift */,
 				E782FE7F2CD92B4900C88A75 /* OilMilesEditorViewController.swift */,
 				E782FE7D2CD92A7F00C88A75 /* OdometerEditorViewController.swift */,
 				E782FE7B2CD928D700C88A75 /* FuelGradeEditorViewController.swift */,
@@ -261,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7CB85FA2CDBABE4001A1684 /* JobDetailViewController.swift in Sources */,
 				E782FE7C2CD928D700C88A75 /* FuelGradeEditorViewController.swift in Sources */,
 				E782FE802CD92B4900C88A75 /* OilMilesEditorViewController.swift in Sources */,
 				E782FE7E2CD92A7F00C88A75 /* OdometerEditorViewController.swift in Sources */,
