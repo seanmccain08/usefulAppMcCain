@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Jobs {
+class Jobs : Codable{
     
     var title : String
     var description : String
@@ -31,7 +31,7 @@ class Jobs {
     
 }
 
-class Car {
+class Car : Codable {
     
     var make : String
     var model : String
@@ -61,7 +61,7 @@ public class AppData {
 }
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidAppear(_ animated: Bool) {
@@ -87,11 +87,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell") as! CarCell
-        //Determine the make & the image
-        cell.imageView!.image = UIImage(named: "\(AppData.cars[indexPath.row].make).png")
         //Labels
         cell.carLabel.text = "\(AppData.cars[indexPath.row].year) \(AppData.cars[indexPath.row].make) \(AppData.cars[indexPath.row].model)"
-        cell.jobsLabel.text = "\(AppData.cars[indexPath.row].jobs.count) Jobs done"
+        cell.jobsLabel.text = "\(AppData.cars[indexPath.row].jobs.count) Jobs"
+        cell.odometerLabel.text = "\(AppData.cars[indexPath.row].miles) Miles"
+        var totalCost = 0.0
+        for job in AppData.cars[indexPath.row].jobs {
+            
+            totalCost+=job.price
+            
+        }
+        cell.costLabel.text = "$\(totalCost) Spent"
         return cell
         
     }
@@ -100,12 +106,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         AppData.currentCar = AppData.cars[indexPath.row]
         self.performSegue(withIdentifier: "segueOne", sender: self)
-        
-    }
-
-    @IBAction func addCarButton(_ sender: Any) {
-        
-        
         
     }
     

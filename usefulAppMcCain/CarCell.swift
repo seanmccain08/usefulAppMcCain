@@ -10,8 +10,9 @@ import UIKit
 
 class CarCell : UITableViewCell {
     
-    @IBOutlet weak var logoImage: UIImageView!
     @IBOutlet weak var carLabel: UILabel!
+    @IBOutlet weak var odometerLabel: UILabel!
+    @IBOutlet weak var costLabel: UILabel!
     @IBOutlet weak var jobsLabel: UILabel!
     
 }
