@@ -57,7 +57,6 @@ public class AppData {
     
     static var cars = [Car(make: "Cadillac", model: "CTS", year: "2004", miles: 131907, fuelGrade: "Premium")]
     static var currentCar = cars[0]
-    static var number = 0
     
 }
 

@@ -38,15 +38,10 @@ class jobsViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell") as! CarCell3
         cell.titleLabel.text = "\(job.title)"
         cell.dateLabel.text = "\(job.dateM)/\(job.dateD)/\(job.dateY)"
+        cell.costLabel.text = "$\(job.price)"
+        cell.odometerLabel.text = "\(job.odometer) Miles"
         cell.descriptionLabel.text = "\(job.description)"
         return cell
-        
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        self.performSegue(withIdentifier: "jobDetailSegue", sender: self)
-        AppData.number = indexPath.row
         
     }
     

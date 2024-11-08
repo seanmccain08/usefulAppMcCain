@@ -14,6 +14,7 @@ class StatisticsViewController: UIViewController {
     @IBOutlet weak var fuelGradeLabel: UILabel!
     @IBOutlet weak var odometerLabel: UILabel!
     @IBOutlet weak var lastOilChangeOdometerLabel: UILabel!
+    @IBOutlet weak var totalCostLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,14 @@ class StatisticsViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
+        var totalCost = 0.0
+        for job in AppData.currentCar.jobs{
+            
+            totalCost+=job.price
+            
+        }
+        totalCostLabel.text = "$\(totalCost) Spent"
         
         if AppData.currentCar.jobs.count == 1 {
             

@@ -14,7 +14,7 @@ class CarViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     @IBOutlet weak var carLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var odometerLabel: UILabel!
-    @IBOutlet weak var oilMilesLabel: UILabel!
+    @IBOutlet weak var totalCostLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,26 +27,24 @@ class CarViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     override func viewDidAppear(_ animated: Bool) {
         
         odometerLabel.text = "Odometer:\n\(AppData.currentCar.miles) Miles"
-        if AppData.currentCar.oilMiles == 0{
+        var totalCost = 0.0
+        for job in AppData.currentCar.jobs{
             
-            oilMilesLabel.text = "Last oil change:\nNever"
-            
-        }
-        else{
-            
-            oilMilesLabel.text = "Last oil change:\n\(AppData.currentCar.oilMiles) Miles"
+            totalCost+=job.price
             
         }
+        totalCostLabel.text = "Total Cost:\n$\(totalCost)"
         if AppData.currentCar.jobs.count > 0{
             
             jobs0 = []
             recentJobsLabel.text = "Recent Jobs"
             if AppData.currentCar.jobs.count > 2{
                 
-                for i in AppData.currentCar.jobs.count-3...AppData.currentCar.jobs.count-1{
-                    
-                    jobs0.append(AppData.currentCar.jobs[i])
-                    
+                if AppData.currentCar.jobs.count > 2 {
+                    jobs0 = Array(AppData.currentCar.jobs.suffix(3))
+                }
+                else {
+                    jobs0 = AppData.currentCar.jobs
                 }
                 
             }
@@ -72,33 +70,19 @@ class CarViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if AppData.currentCar.jobs.count > 0{
-            
-            if AppData.currentCar.jobs.count > 2{
-                
-                return 3
-                
-            }
-            
-            return AppData.currentCar.jobs.count
-            
-        }
-        else{
-            
-            return 0
-            
-        }
+        return jobs0.count
         
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let car = jobs0[indexPath.row]
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell") as! CarCell2
-        cell.titleLabel.text = "\(car.title)"
-        cell.dateLabel.text = "\(car.dateM)/\(car.dateD)/\(car.dateY)"
-        cell.descriptionLabel.text = "\(car.description)"
+        let job = jobs0[indexPath.row]
+        cell.titleLabel.text = "\(job.title)"
+        cell.dateLabel.text = "\(job.dateM)/\(job.dateD)/\(job.dateY)"
+        cell.costLabel.text = "$\(job.price)"
+        cell.odometerLabel.text = "\(job.odometer) Miles"
+        cell.descriptionLabel.text = "\(job.description)"
         return cell
         
     }
