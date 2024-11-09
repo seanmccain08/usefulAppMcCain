@@ -64,6 +64,8 @@ class NewJobViewController: UIViewController, UITextFieldDelegate {
             yearField.text = ""
             priceField.text = ""
             
+            ViewController.save()
+            
         }
         
     }

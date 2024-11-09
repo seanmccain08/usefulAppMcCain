@@ -34,6 +34,7 @@ class AddViewController: UIViewController {
             yearField.text = ""
             milesField.text = ""
             fuelGradeField.text = ""
+            ViewController.save()
             
         }
         else{

@@ -39,6 +39,7 @@ class FuelGradeEditorViewController: UIViewController {
             oilMilesField.text = ""
             
         }
+        ViewController.save()
         
     }
 

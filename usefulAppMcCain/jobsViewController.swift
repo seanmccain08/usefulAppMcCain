@@ -40,8 +40,20 @@ class jobsViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.dateLabel.text = "\(job.dateM)/\(job.dateD)/\(job.dateY)"
         cell.costLabel.text = "$\(job.price)"
         cell.odometerLabel.text = "\(job.odometer) Miles"
-        cell.descriptionLabel.text = "\(job.description)"
+        cell.descriptionLabel.text = "\(job.description)\n"
         return cell
+        
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath){
+        
+        if editingStyle == .delete{
+            
+            AppData.currentCar.jobs.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            ViewController.save()
+            
+        }
         
     }
     

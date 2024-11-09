@@ -33,6 +33,9 @@ class CarViewController: UIViewController, UITableViewDelegate, UITableViewDataS
             totalCost+=job.price
             
         }
+        totalCost*=100
+        totalCost.round()
+        totalCost/=100
         totalCostLabel.text = "Total Cost:\n$\(totalCost)"
         if AppData.currentCar.jobs.count > 0{
             
@@ -82,7 +85,7 @@ class CarViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         cell.dateLabel.text = "\(job.dateM)/\(job.dateD)/\(job.dateY)"
         cell.costLabel.text = "$\(job.price)"
         cell.odometerLabel.text = "\(job.odometer) Miles"
-        cell.descriptionLabel.text = "\(job.description)"
+        cell.descriptionLabel.text = "\(job.description)\n"
         return cell
         
     }

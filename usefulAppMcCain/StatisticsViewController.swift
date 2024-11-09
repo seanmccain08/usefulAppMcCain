@@ -30,6 +30,9 @@ class StatisticsViewController: UIViewController {
             totalCost+=job.price
             
         }
+        totalCost*=100
+        totalCost.round()
+        totalCost/=100
         totalCostLabel.text = "$\(totalCost) Spent"
         
         if AppData.currentCar.jobs.count == 1 {

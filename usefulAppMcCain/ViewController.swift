@@ -55,7 +55,7 @@ class Car : Codable {
 
 public class AppData {
     
-    static var cars = [Car(make: "Cadillac", model: "CTS", year: "2004", miles: 131907, fuelGrade: "Premium")]
+    static var cars : [Car] = []
     static var currentCar = cars[0]
     
 }
@@ -75,6 +75,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        if let items = UserDefaults.standard.data(forKey: "carList"){
+            
+            let decoder = JSONDecoder()
+            if let decoded = try? decoder.decode([Car].self, from: items) {
+                            
+                AppData.cars = decoded
+                            
+            }
+            
+        }
         
     }
     
@@ -97,8 +108,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             totalCost+=job.price
             
         }
+        totalCost*=100
+        totalCost.round()
+        totalCost/=100
         cell.costLabel.text = "$\(totalCost) Spent"
         return cell
+        
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath){
+        
+        if editingStyle == .delete{
+            
+            AppData.cars.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            ViewController.save()
+            
+        }
         
     }
     
@@ -106,6 +132,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         AppData.currentCar = AppData.cars[indexPath.row]
         self.performSegue(withIdentifier: "segueOne", sender: self)
+        
+    }
+    
+    
+    public static func save(){
+        
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(AppData.cars) {
+            
+            UserDefaults.standard.set(encoded, forKey: "carList")
+            
+        }
         
     }
     
