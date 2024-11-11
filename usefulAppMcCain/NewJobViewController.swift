@@ -13,9 +13,7 @@ class NewJobViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var titleField: UITextField!
     @IBOutlet weak var odometerField: UITextField!
     @IBOutlet weak var descriptionField: UITextField!
-    @IBOutlet weak var monthField: UITextField!
-    @IBOutlet weak var dayField: UITextField!
-    @IBOutlet weak var yearField: UITextField!
+    @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var priceField: UITextField!
     
     override func viewDidLoad() {
@@ -24,9 +22,6 @@ class NewJobViewController: UIViewController, UITextFieldDelegate {
         titleField.delegate = self
         odometerField.delegate = self
         descriptionField.delegate = self
-        monthField.delegate = self
-        dayField.delegate = self
-        yearField.delegate = self
         
     }
     
@@ -36,17 +31,20 @@ class NewJobViewController: UIViewController, UITextFieldDelegate {
         titleField.resignFirstResponder()
         odometerField.resignFirstResponder()
         descriptionField.resignFirstResponder()
-        monthField.resignFirstResponder()
-        dayField.resignFirstResponder()
-        yearField.resignFirstResponder()
+
         return true
     }
 
     @IBAction func addButton(_ sender: Any) {
         
-        if titleField.text != "" && odometerField.text != "" && descriptionField.text != "" && monthField.text != "" && dayField.text != "" && yearField.text != "" && priceField.text != ""{
+        if titleField.text != "" && odometerField.text != "" && descriptionField.text != "" && priceField.text != ""{
             
-            AppData.currentCar.jobs.append(Jobs(title: titleField.text!, description: descriptionField.text!, dateM: Int(monthField.text!)!, dateD: Int(dayField.text!)!, dateY: Int(yearField.text!)!, odometer: Int(odometerField.text!)!, isOilChange: oilSwitch.isOn, price: Double(priceField.text!)!))
+            let calendar = Calendar.current
+            let month = calendar.dateComponents([.month], from: datePicker.date).month
+            let day = calendar.dateComponents([.day], from: datePicker.date).day
+            let year = calendar.dateComponents([.year], from: datePicker.date).year
+            
+            AppData.currentCar.jobs.append(Jobs(title: titleField.text!, description: descriptionField.text!, dateM: month!, dateD: day!, dateY: year!, odometer: Int(odometerField.text!)!, isOilChange: oilSwitch.isOn, price: Double(priceField.text!)!))
             
             if oilSwitch.isOn{
                 
@@ -59,9 +57,6 @@ class NewJobViewController: UIViewController, UITextFieldDelegate {
             titleField.text = ""
             odometerField.text = ""
             descriptionField.text = ""
-            monthField.text = ""
-            dayField.text = ""
-            yearField.text = ""
             priceField.text = ""
             
             ViewController.save()

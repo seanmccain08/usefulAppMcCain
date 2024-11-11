@@ -40,8 +40,9 @@ class Car : Codable {
     var miles : Int
     var fuelGrade : String
     var oilMiles : Int
+    var moneySpent : Double
     
-    init(make: String, model: String, year: String, miles: Int, fuelGrade: String) {
+    init(make: String, model: String, year: String, miles: Int, fuelGrade: String, moneySpent: Double) {
         self.make = make
         self.model = model
         self.year = year
@@ -49,6 +50,7 @@ class Car : Codable {
         self.miles = miles
         self.fuelGrade = fuelGrade
         self.oilMiles = 0
+        self.moneySpent = moneySpent
     }
     
 }
@@ -108,6 +110,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             totalCost+=job.price
             
         }
+        totalCost+=AppData.currentCar.moneySpent
         totalCost*=100
         totalCost.round()
         totalCost/=100

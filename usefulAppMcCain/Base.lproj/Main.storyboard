@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2b9-bs-RN2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2b9-bs-RN2">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -150,35 +150,40 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="lGS-gU-MRU">
-                                <rect key="frame" x="25" y="181.33333333333334" width="343" height="258.66666666666663"/>
+                                <rect key="frame" x="25" y="181.33333333333334" width="343" height="286.66666666666663"/>
                                 <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Xf-Oo-dap">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="35.666666666666664"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Make" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SVM-oU-qxf">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="38.666666666666664"/>
+                                        <rect key="frame" x="0.0" y="41.666666666666657" width="343" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Model" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oqM-iU-u9V">
-                                        <rect key="frame" x="0.0" y="44.666666666666657" width="343" height="39"/>
+                                        <rect key="frame" x="0.0" y="83.666666666666657" width="343" height="35.666666666666657"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Xf-Oo-dap">
-                                        <rect key="frame" x="0.0" y="89.666666666666657" width="343" height="38.666666666666657"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Odometer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vbm-eX-z75">
+                                        <rect key="frame" x="0.0" y="125.33333333333334" width="343" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Odometer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vbm-eX-z75">
-                                        <rect key="frame" x="0.0" y="134.33333333333334" width="343" height="39"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Money Invested (So Far)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Orx-kz-OsS">
+                                        <rect key="frame" x="0.0" y="167.33333333333334" width="343" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Fuel Grade" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i7u-Vi-7Up">
-                                        <rect key="frame" x="0.0" y="179.33333333333334" width="343" height="38.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="209.33333333333334" width="343" height="35.666666666666657"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RNA-Tg-tff">
-                                        <rect key="frame" x="0.0" y="223.99999999999997" width="343" height="34.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="250.99999999999997" width="343" height="35.666666666666657"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="Add Car"/>
                                         <connections>
@@ -187,15 +192,16 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="SVM-oU-qxf" firstAttribute="height" secondItem="lGS-gU-MRU" secondAttribute="height" multiplier="0.15" id="2Q1-82-JG6"/>
-                                    <constraint firstItem="oqM-iU-u9V" firstAttribute="height" secondItem="lGS-gU-MRU" secondAttribute="height" multiplier="0.15" id="Lkn-15-Zce"/>
-                                    <constraint firstItem="i7u-Vi-7Up" firstAttribute="height" secondItem="lGS-gU-MRU" secondAttribute="height" multiplier="0.15" id="Pgb-z0-TWd"/>
-                                    <constraint firstItem="vbm-eX-z75" firstAttribute="height" secondItem="lGS-gU-MRU" secondAttribute="height" multiplier="0.15" id="hk8-uM-XKj"/>
-                                    <constraint firstItem="6Xf-Oo-dap" firstAttribute="height" secondItem="lGS-gU-MRU" secondAttribute="height" multiplier="0.15" id="jFs-or-aNZ"/>
+                                    <constraint firstItem="SVM-oU-qxf" firstAttribute="height" secondItem="lGS-gU-MRU" secondAttribute="height" multiplier="0.125" id="2Q1-82-JG6"/>
+                                    <constraint firstItem="oqM-iU-u9V" firstAttribute="height" secondItem="lGS-gU-MRU" secondAttribute="height" multiplier="0.125" id="Lkn-15-Zce"/>
+                                    <constraint firstItem="i7u-Vi-7Up" firstAttribute="height" secondItem="lGS-gU-MRU" secondAttribute="height" multiplier="0.125" id="Pgb-z0-TWd"/>
+                                    <constraint firstItem="Orx-kz-OsS" firstAttribute="height" secondItem="lGS-gU-MRU" secondAttribute="height" multiplier="0.125" id="PxN-SS-F36"/>
+                                    <constraint firstItem="vbm-eX-z75" firstAttribute="height" secondItem="lGS-gU-MRU" secondAttribute="height" multiplier="0.125" id="hk8-uM-XKj"/>
+                                    <constraint firstItem="6Xf-Oo-dap" firstAttribute="height" secondItem="lGS-gU-MRU" secondAttribute="height" multiplier="0.125" id="jFs-or-aNZ"/>
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For Fuel grade, enter something like &quot;Standard&quot; or &quot;Premium&quot;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0m-VN-7p4">
-                                <rect key="frame" x="52" y="448" width="288" height="100"/>
+                                <rect key="frame" x="52" y="476" width="288" height="72"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -210,7 +216,7 @@
                             <constraint firstItem="cuA-IM-74T" firstAttribute="trailing" secondItem="lGS-gU-MRU" secondAttribute="trailing" constant="25" id="RCE-y1-dfY"/>
                             <constraint firstItem="2hP-47-Hxr" firstAttribute="top" secondItem="cuA-IM-74T" secondAttribute="top" constant="30" id="Vh3-sA-LxD"/>
                             <constraint firstItem="cuA-IM-74T" firstAttribute="bottom" secondItem="2hP-47-Hxr" secondAttribute="bottom" constant="664.66999999999996" id="cOm-c0-NVc"/>
-                            <constraint firstItem="cuA-IM-74T" firstAttribute="bottom" secondItem="lGS-gU-MRU" secondAttribute="bottom" constant="378" id="iPP-ha-1QB"/>
+                            <constraint firstItem="cuA-IM-74T" firstAttribute="bottom" secondItem="lGS-gU-MRU" secondAttribute="bottom" constant="350" id="iPP-ha-1QB"/>
                             <constraint firstItem="J0m-VN-7p4" firstAttribute="leading" secondItem="cuA-IM-74T" secondAttribute="leading" constant="52" id="kTx-XP-Cre"/>
                             <constraint firstItem="2hP-47-Hxr" firstAttribute="leading" secondItem="cuA-IM-74T" secondAttribute="leading" constant="150" id="mXE-0o-QTM"/>
                             <constraint firstItem="cuA-IM-74T" firstAttribute="trailing" secondItem="2hP-47-Hxr" secondAttribute="trailing" constant="150.33000000000001" id="po0-CB-iUc"/>
@@ -225,6 +231,7 @@
                         <outlet property="makeField" destination="SVM-oU-qxf" id="ltu-7L-CZi"/>
                         <outlet property="milesField" destination="vbm-eX-z75" id="eiI-2r-Yht"/>
                         <outlet property="modelField" destination="oqM-iU-u9V" id="WbR-Kb-sTH"/>
+                        <outlet property="moneyInvestedField" destination="Orx-kz-OsS" id="OrO-cx-Gwe"/>
                         <outlet property="yearField" destination="6Xf-Oo-dap" id="fG1-fW-81L"/>
                     </connections>
                 </viewController>
@@ -840,34 +847,20 @@
                                         <rect key="frame" x="0.0" y="109.66666666666669" width="373" height="34.666666666666657"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is Oil Change:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTL-gi-LS8">
-                                                <rect key="frame" x="0.0" y="0.0" width="112" height="34.666666666666664"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="149.33333333333334" height="34.666666666666664"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="center" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="mdM-fb-4et">
-                                                <rect key="frame" x="117" y="0.0" width="51" height="34.666666666666664"/>
+                                                <rect key="frame" x="154.33333333333334" y="0.0" width="51" height="34.666666666666664"/>
                                             </switch>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="M" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="igb-Aj-6ev">
-                                                <rect key="frame" x="171" y="0.0" width="56" height="34.666666666666664"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="D" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zb8-mc-cuT">
-                                                <rect key="frame" x="231.99999999999997" y="0.0" width="55.666666666666657" height="34.666666666666664"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="YYYY" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W2f-K9-ZBv">
-                                                <rect key="frame" x="292.66666666666669" y="0.0" width="80.333333333333314" height="34.666666666666664"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                            </textField>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="bze-Tc-D9y">
+                                                <rect key="frame" x="208" y="0.0" width="165" height="34"/>
+                                            </datePicker>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="YTL-gi-LS8" firstAttribute="width" secondItem="5J2-1Y-QPX" secondAttribute="width" multiplier="0.3" id="CSa-Ca-M0M"/>
-                                            <constraint firstItem="zb8-mc-cuT" firstAttribute="width" secondItem="5J2-1Y-QPX" secondAttribute="width" multiplier="0.15" id="Sm3-Uu-Bfc"/>
-                                            <constraint firstItem="igb-Aj-6ev" firstAttribute="width" secondItem="5J2-1Y-QPX" secondAttribute="width" multiplier="0.15" id="keM-BU-k0B"/>
+                                            <constraint firstItem="YTL-gi-LS8" firstAttribute="width" secondItem="5J2-1Y-QPX" secondAttribute="width" multiplier="0.4" id="CSa-Ca-M0M"/>
                                         </constraints>
                                     </stackView>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Job Description" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Neq-Dv-lw5">
@@ -900,14 +893,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="dayField" destination="zb8-mc-cuT" id="n6b-wo-4LY"/>
+                        <outlet property="datePicker" destination="bze-Tc-D9y" id="ZBY-9k-a2h"/>
                         <outlet property="descriptionField" destination="Neq-Dv-lw5" id="vFk-wk-6Mz"/>
-                        <outlet property="monthField" destination="igb-Aj-6ev" id="Nji-us-bFu"/>
                         <outlet property="odometerField" destination="R78-UR-TEz" id="dC6-r4-khy"/>
                         <outlet property="oilSwitch" destination="mdM-fb-4et" id="zmc-J8-dIt"/>
                         <outlet property="priceField" destination="Lmx-i7-G0w" id="KRn-yn-Ye0"/>
                         <outlet property="titleField" destination="tXp-5e-vxP" id="Mm2-5L-LRu"/>
-                        <outlet property="yearField" destination="W2f-K9-ZBv" id="int-dT-cUw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bGq-Sy-RCS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -969,13 +960,13 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

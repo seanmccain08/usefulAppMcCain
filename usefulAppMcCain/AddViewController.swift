@@ -15,6 +15,7 @@ class AddViewController: UIViewController {
     @IBOutlet weak var yearField: UITextField!
     @IBOutlet weak var milesField: UITextField!
     @IBOutlet weak var fuelGradeField: UITextField!
+    @IBOutlet weak var moneyInvestedField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,15 +26,16 @@ class AddViewController: UIViewController {
     
     @IBAction func addCarButton(_ sender: UIButton) {
         
-        if(makeField.text != "" && modelField.text != "" && yearField.text != "" && milesField.text != ""){
+        if(makeField.text != "" && modelField.text != "" && yearField.text != "" && milesField.text != "" && moneyInvestedField.text != "" && fuelGradeField.text != ""){
             
             errorLabel.isHidden = true
-            AppData.cars.append(Car(make: makeField.text!, model: modelField.text!, year: yearField.text!, miles: Int(milesField.text!)!, fuelGrade: fuelGradeField.text!))
+            AppData.cars.append(Car(make: makeField.text!, model: modelField.text!, year: yearField.text!, miles: Int(milesField.text!)!, fuelGrade: fuelGradeField.text!, moneySpent: Double(moneyInvestedField.text!)!))
             makeField.text = ""
             modelField.text = ""
             yearField.text = ""
             milesField.text = ""
             fuelGradeField.text = ""
+            moneyInvestedField.text = ""
             ViewController.save()
             
         }

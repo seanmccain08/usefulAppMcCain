@@ -30,6 +30,7 @@ class StatisticsViewController: UIViewController {
             totalCost+=job.price
             
         }
+        totalCost+=AppData.currentCar.moneySpent
         totalCost*=100
         totalCost.round()
         totalCost/=100

@@ -33,6 +33,7 @@ class CarViewController: UIViewController, UITableViewDelegate, UITableViewDataS
             totalCost+=job.price
             
         }
+        totalCost+=AppData.currentCar.moneySpent
         totalCost*=100
         totalCost.round()
         totalCost/=100
