@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Car Select-->
+        <!--Car Tracker-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="usefulAppMcCain" customModuleProvider="target" sceneMemberID="viewController">
@@ -119,7 +119,7 @@
                             <constraint firstItem="Niu-Od-k2I" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fss-bc-8NU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Car Select" id="wWx-J2-zAA">
+                    <navigationItem key="navigationItem" title="Car Tracker" id="wWx-J2-zAA">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ebo-cd-GXa">
                             <connections>
                                 <segue destination="jNB-NL-Tj0" kind="show" id="4Q5-4y-WK2"/>
@@ -143,10 +143,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid Entry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hP-47-Hxr">
-                                <rect key="frame" x="150" y="133" width="92.666666666666686" height="20.333333333333343"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hP-47-Hxr">
+                                <rect key="frame" x="100" y="133" width="193" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" systemColor="systemRedColor"/>
+                                <color key="textColor" systemColor="systemGreenColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="lGS-gU-MRU">
@@ -218,8 +218,8 @@
                             <constraint firstItem="cuA-IM-74T" firstAttribute="bottom" secondItem="2hP-47-Hxr" secondAttribute="bottom" constant="664.66999999999996" id="cOm-c0-NVc"/>
                             <constraint firstItem="cuA-IM-74T" firstAttribute="bottom" secondItem="lGS-gU-MRU" secondAttribute="bottom" constant="350" id="iPP-ha-1QB"/>
                             <constraint firstItem="J0m-VN-7p4" firstAttribute="leading" secondItem="cuA-IM-74T" secondAttribute="leading" constant="52" id="kTx-XP-Cre"/>
-                            <constraint firstItem="2hP-47-Hxr" firstAttribute="leading" secondItem="cuA-IM-74T" secondAttribute="leading" constant="150" id="mXE-0o-QTM"/>
-                            <constraint firstItem="cuA-IM-74T" firstAttribute="trailing" secondItem="2hP-47-Hxr" secondAttribute="trailing" constant="150.33000000000001" id="po0-CB-iUc"/>
+                            <constraint firstItem="2hP-47-Hxr" firstAttribute="leading" secondItem="cuA-IM-74T" secondAttribute="leading" constant="100" id="mXE-0o-QTM"/>
+                            <constraint firstItem="cuA-IM-74T" firstAttribute="trailing" secondItem="2hP-47-Hxr" secondAttribute="trailing" constant="100" id="po0-CB-iUc"/>
                             <constraint firstItem="lGS-gU-MRU" firstAttribute="top" secondItem="2hP-47-Hxr" secondAttribute="bottom" constant="28" id="vi8-d3-PuR"/>
                             <constraint firstItem="cuA-IM-74T" firstAttribute="trailing" secondItem="J0m-VN-7p4" secondAttribute="trailing" constant="53" id="vsr-qY-B41"/>
                         </constraints>
@@ -856,7 +856,7 @@
                                                 <rect key="frame" x="154.33333333333334" y="0.0" width="51" height="34.666666666666664"/>
                                             </switch>
                                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="bze-Tc-D9y">
-                                                <rect key="frame" x="208" y="0.0" width="165" height="34"/>
+                                                <rect key="frame" x="208.33333333333337" y="0.0" width="164.66666666666663" height="34.666666666666664"/>
                                             </datePicker>
                                         </subviews>
                                         <constraints>
@@ -961,6 +961,9 @@
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

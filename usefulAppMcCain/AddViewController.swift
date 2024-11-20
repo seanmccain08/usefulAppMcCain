@@ -28,7 +28,6 @@ class AddViewController: UIViewController {
         
         if(makeField.text != "" && modelField.text != "" && yearField.text != "" && milesField.text != "" && moneyInvestedField.text != "" && fuelGradeField.text != ""){
             
-            errorLabel.isHidden = true
             AppData.cars.append(Car(make: makeField.text!, model: modelField.text!, year: yearField.text!, miles: Int(milesField.text!)!, fuelGrade: fuelGradeField.text!, moneySpent: Double(moneyInvestedField.text!)!))
             makeField.text = ""
             modelField.text = ""
@@ -36,12 +35,15 @@ class AddViewController: UIViewController {
             milesField.text = ""
             fuelGradeField.text = ""
             moneyInvestedField.text = ""
+            errorLabel.text = "Car Added!"
+            errorLabel.textColor = UIColor.systemGreen
             ViewController.save()
             
         }
         else{
             
-            errorLabel.isHidden = false
+            errorLabel.text = "Invalid Entry"
+            errorLabel.textColor = UIColor.systemRed
             
         }
         
