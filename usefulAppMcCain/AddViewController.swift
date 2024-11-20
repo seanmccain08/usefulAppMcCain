@@ -3,7 +3,7 @@
 //  usefulAppMcCain
 //
 //  Created by SEAN MCCAIN on 10/31/24.
-// freaky yns
+//  goofty goober
 import UIKit
 
 class AddViewController: UIViewController {
