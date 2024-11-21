@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -324,6 +325,22 @@
             </objects>
             <point key="canvasLocation" x="904.58015267175574" y="1881.6901408450706"/>
         </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="pTF-aV-7jL">
+            <objects>
+                <viewController id="J0j-Uc-y4B" customClass="SettingsViewController" customModule="usefulAppMcCain" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="03j-LK-uhM">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Bbc-xq-uJC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bYz-VJ-ocz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T6w-Nf-G0w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1682" y="1882"/>
+        </scene>
         <!--Statistics-->
         <scene sceneID="1r3-iB-sdr">
             <objects>
@@ -511,7 +528,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="MPq-E7-mqH">
-                                        <rect key="frame" x="0.0" y="79.000000000000028" width="393" height="501.66666666666674"/>
+                                        <rect key="frame" x="0.0" y="79" width="393" height="447"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" rowHeight="96" id="jA8-cN-jdg" customClass="CarCell2" customModule="usefulAppMcCain" customModuleProvider="target">
@@ -607,24 +624,24 @@
                                         </prototypes>
                                     </tableView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rq0-5Z-Xbq">
-                                        <rect key="frame" x="0.0" y="586.66666666666663" width="393" height="65.333333333333371"/>
+                                        <rect key="frame" x="0.0" y="532" width="393" height="65"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="engine.combustion" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="tXd-bj-sIW">
-                                                <rect key="frame" x="0.0" y="1.6666666666666643" width="51" height="62.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="1.6666666666666643" width="51" height="61.999999999999993"/>
                                                 <color key="tintColor" systemColor="systemOrangeColor"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Odometer:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LxY-x7-bVB">
-                                                <rect key="frame" x="51" y="0.0" width="145.66666666666666" height="65.333333333333329"/>
+                                                <rect key="frame" x="51" y="0.0" width="145.66666666666666" height="65"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="creditcard" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="XyS-6U-3E5">
-                                                <rect key="frame" x="196.66666666666666" y="2" width="51" height="61.333333333333329"/>
+                                                <rect key="frame" x="196.66666666666666" y="2" width="51" height="61"/>
                                                 <color key="tintColor" systemColor="systemBlueColor"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Cost:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R2s-Xj-Ppw">
-                                                <rect key="frame" x="247.66666666666663" y="0.0" width="145.33333333333337" height="65.333333333333329"/>
+                                                <rect key="frame" x="247.66666666666663" y="0.0" width="145.33333333333337" height="65"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -636,9 +653,21 @@
                                             <constraint firstItem="XyS-6U-3E5" firstAttribute="width" secondItem="rq0-5Z-Xbq" secondAttribute="width" multiplier="0.13" id="HSX-Ec-JyJ"/>
                                         </constraints>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tot-O7-kf5">
+                                        <rect key="frame" x="0.0" y="603" width="393" height="49"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Settings">
+                                            <color key="baseBackgroundColor" name="AccentColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="J0j-Uc-y4B" kind="show" id="OzK-53-mcz"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="1ka-on-Sm2" firstAttribute="height" secondItem="HwA-bK-LNT" secondAttribute="height" multiplier="0.0720721" id="0zA-5O-0Wh"/>
+                                    <constraint firstItem="tot-O7-kf5" firstAttribute="height" secondItem="HwA-bK-LNT" secondAttribute="height" multiplier="0.075" id="9yR-5F-dnd"/>
                                     <constraint firstItem="KxC-JV-M5P" firstAttribute="height" secondItem="HwA-bK-LNT" secondAttribute="height" multiplier="0.0305305" id="DTo-Bh-aSg"/>
                                     <constraint firstItem="rq0-5Z-Xbq" firstAttribute="height" secondItem="HwA-bK-LNT" secondAttribute="height" multiplier="0.1" id="zuJ-gQ-0QE"/>
                                 </constraints>
@@ -956,6 +985,9 @@
         <image name="engine.combustion.fill" catalog="system" width="128" height="80"/>
         <image name="fuelpump" catalog="system" width="128" height="125"/>
         <image name="oilcan" catalog="system" width="128" height="58"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
