@@ -657,7 +657,7 @@
                                         <rect key="frame" x="0.0" y="603" width="393" height="49"/>
                                         <color key="backgroundColor" name="AccentColor"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Settings">
+                                        <buttonConfiguration key="configuration" style="filled" image="gear" catalog="system">
                                             <color key="baseBackgroundColor" name="AccentColor"/>
                                         </buttonConfiguration>
                                         <connections>
@@ -984,6 +984,7 @@
         <image name="engine.combustion" catalog="system" width="128" height="79"/>
         <image name="engine.combustion.fill" catalog="system" width="128" height="80"/>
         <image name="fuelpump" catalog="system" width="128" height="125"/>
+        <image name="gear" catalog="system" width="128" height="122"/>
         <image name="oilcan" catalog="system" width="128" height="58"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
