@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2b9-bs-RN2">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
@@ -334,20 +334,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b0U-Xd-fYC">
-                                <rect key="frame" x="176" y="411" width="41" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <menu key="menu" id="SOw-wg-AlC">
-                                    <children>
-                                        <command title="Item 1" id="IGn-W7-AlM"/>
-                                        <command title="Item 2" id="Sam-iy-xMt"/>
-                                    </children>
-                                </menu>
-                                <state key="normal" title="Colors"/>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uM0-VO-tIA">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tQE-wa-L27">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="715"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Background Color:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7m-ZG-0mC">
+                                                <rect key="frame" x="0.0" y="0.0" width="196.66666666666666" height="715"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b0U-Xd-fYC">
+                                                <rect key="frame" x="196.66666666666663" y="0.0" width="196.33333333333337" height="715"/>
+                                                <menu key="menu" id="SOw-wg-AlC">
+                                                    <children>
+                                                        <command title="Item 1" id="IGn-W7-AlM"/>
+                                                        <command title="Item 2" id="Sam-iy-xMt"/>
+                                                    </children>
+                                                </menu>
+                                                <state key="normal" title="Colors"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="p7m-ZG-0mC" firstAttribute="width" secondItem="tQE-wa-L27" secondAttribute="width" multiplier="0.5" id="VDu-EW-ANO"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bbc-xq-uJC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Bbc-xq-uJC" firstAttribute="bottom" secondItem="uM0-VO-tIA" secondAttribute="bottom" id="3u7-Ma-tpt"/>
+                            <constraint firstItem="Bbc-xq-uJC" firstAttribute="trailing" secondItem="uM0-VO-tIA" secondAttribute="trailing" id="Hmc-DC-GSu"/>
+                            <constraint firstItem="uM0-VO-tIA" firstAttribute="leading" secondItem="Bbc-xq-uJC" secondAttribute="leading" id="Rdd-u1-GoP"/>
+                            <constraint firstItem="uM0-VO-tIA" firstAttribute="top" secondItem="Bbc-xq-uJC" secondAttribute="top" id="ZZu-Ma-K8c"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="bYz-VJ-ocz"/>
                     <connections>

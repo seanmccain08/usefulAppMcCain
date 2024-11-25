@@ -25,7 +25,7 @@ class SettingsViewController: UIViewController {
         }
             
             popUpButtonOutlet.menu = UIMenu(children :
-                [UIAction(title: "Option 1", state : .on, handler: optionClosure), UIAction(title: "Option 2", handler: optionClosure), UIAction(title: "Option 3", handler: optionClosure), UIAction(title: "Option 4", handler: optionClosure)])
+                [UIAction(title: "Match System", state : .on, handler: optionClosure), UIAction(title: "Gray", handler: optionClosure), UIAction(title: "Blue", handler: optionClosure), UIAction(title: "Pink", handler: optionClosure)])
             
                 popUpButtonOutlet.showsMenuAsPrimaryAction = true
                 popUpButtonOutlet.changesSelectionAsPrimaryAction = true
