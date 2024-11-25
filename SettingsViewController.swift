@@ -8,22 +8,30 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
-
+    @IBOutlet weak var popUpButtonOutlet: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setPopUpButton()
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setPopUpButton(){
+        
+        //make different actions like this to change colors, put 1 function in 1 spot in children array
+        let  optionClosure = {(action : UIAction) in
+            print(action.title)
+        }
+            
+            popUpButtonOutlet.menu = UIMenu(children :
+                [UIAction(title: "Option 1", state : .on, handler: optionClosure), UIAction(title: "Option 2", handler: optionClosure), UIAction(title: "Option 3", handler: optionClosure), UIAction(title: "Option 4", handler: optionClosure)])
+            
+                popUpButtonOutlet.showsMenuAsPrimaryAction = true
+                popUpButtonOutlet.changesSelectionAsPrimaryAction = true
+        }
     }
-    */
+    
+    
 
-}
+

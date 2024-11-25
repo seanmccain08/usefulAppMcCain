@@ -7,6 +7,7 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -325,17 +326,33 @@
             </objects>
             <point key="canvasLocation" x="904.58015267175574" y="1881.6901408450706"/>
         </scene>
-        <!--Settings View Controller-->
+        <!--Settings-->
         <scene sceneID="pTF-aV-7jL">
             <objects>
                 <viewController id="J0j-Uc-y4B" customClass="SettingsViewController" customModule="usefulAppMcCain" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="03j-LK-uhM">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b0U-Xd-fYC">
+                                <rect key="frame" x="176" y="411" width="41" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <menu key="menu" id="SOw-wg-AlC">
+                                    <children>
+                                        <command title="Item 1" id="IGn-W7-AlM"/>
+                                        <command title="Item 2" id="Sam-iy-xMt"/>
+                                    </children>
+                                </menu>
+                                <state key="normal" title="Colors"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Bbc-xq-uJC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="bYz-VJ-ocz"/>
+                    <navigationItem key="navigationItem" title="Settings" id="bYz-VJ-ocz"/>
+                    <connections>
+                        <outlet property="popUpButtonOutlet" destination="b0U-Xd-fYC" id="QrP-3y-PDJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T6w-Nf-G0w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
