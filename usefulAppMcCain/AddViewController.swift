@@ -24,6 +24,10 @@ class AddViewController: UIViewController {
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        view.backgroundColor = AppData.backGroundcolor
+    }
+    
     @IBAction func addCarButton(_ sender: UIButton) {
         
         if(makeField.text != "" && modelField.text != "" && yearField.text != "" && milesField.text != "" && moneyInvestedField.text != "" && fuelGradeField.text != ""){

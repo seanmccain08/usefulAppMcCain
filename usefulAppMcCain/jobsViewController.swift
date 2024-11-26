@@ -21,6 +21,7 @@ class jobsViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidAppear(_ animated: Bool) {
         
+        view.backgroundColor = AppData.backGroundcolor
         tableView.reloadData()
         
     }

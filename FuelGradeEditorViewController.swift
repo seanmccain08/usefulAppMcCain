@@ -19,6 +19,10 @@ class FuelGradeEditorViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        view.backgroundColor = AppData.backGroundcolor
+    }
+    
     @IBAction func updateInfo(_ sender: Any) {
         
         if fuelGradeOutlet.text != ""{

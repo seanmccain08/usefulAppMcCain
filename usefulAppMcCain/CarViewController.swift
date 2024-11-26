@@ -26,6 +26,7 @@ class CarViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     }
     override func viewDidAppear(_ animated: Bool) {
         
+        view.backgroundColor = AppData.backGroundcolor
         odometerLabel.text = "Odometer:\n\(AppData.currentCar.miles) Miles"
         var totalCost = 0.0
         for job in AppData.currentCar.jobs{

@@ -59,6 +59,8 @@ public class AppData {
     
     static var cars : [Car] = []
     static var currentCar = cars[0]
+    static var backGroundcolor = UIColor.systemBackground
+    static var bgColorString = "System"
     
 }
 
@@ -69,6 +71,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidAppear(_ animated: Bool) {
         
         tableView.reloadData()
+        view.backgroundColor = AppData.backGroundcolor
         
     }
     
@@ -88,6 +91,32 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
             
         }
+        if let background = UserDefaults.standard.string(forKey: "bg"){
+            
+            AppData.bgColorString = background
+            
+        }
+        if(AppData.bgColorString == "system"){
+            
+            AppData.backGroundcolor = UIColor.systemBackground
+            
+        }
+        else if(AppData.bgColorString == "gray"){
+            
+            AppData.backGroundcolor = UIColor.lightGray
+            
+        }
+        else if(AppData.bgColorString == "blue"){
+            
+            AppData.backGroundcolor = UIColor(red: 0, green: 0.4, blue: 0.6, alpha: 1)
+            
+        }
+        else{
+            
+            AppData.backGroundcolor = UIColor(red: 1, green: 0.6, blue: 1, alpha: 1)
+            
+        }
+        view.backgroundColor = AppData.backGroundcolor
         
     }
     

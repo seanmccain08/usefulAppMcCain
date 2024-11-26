@@ -25,7 +25,9 @@ class NewJobViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    
+    override func viewDidAppear(_ animated: Bool) {
+        view.backgroundColor = AppData.backGroundcolor
+    }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         titleField.resignFirstResponder()

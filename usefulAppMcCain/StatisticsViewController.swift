@@ -24,6 +24,7 @@ class StatisticsViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         
+        view.backgroundColor = AppData.backGroundcolor
         var totalCost = 0.0
         for job in AppData.currentCar.jobs{
             
