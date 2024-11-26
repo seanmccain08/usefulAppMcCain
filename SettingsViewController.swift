@@ -20,12 +20,21 @@ class SettingsViewController: UIViewController {
     func setPopUpButton(){
         
         //make different actions like this to change colors, put 1 function in 1 spot in children array
-        let  optionClosure = {(action : UIAction) in
+        let  defaultBackround = {(action : UIAction) in
+            print(action.title)
+        }
+        let  grayBackround = {(action : UIAction) in
+            print(action.title)
+        }
+        let  blueBackround = {(action : UIAction) in
+            print(action.title)
+        }
+        let  pinkBackround = {(action : UIAction) in
             print(action.title)
         }
             
             popUpButtonOutlet.menu = UIMenu(children :
-                [UIAction(title: "Match System", state : .on, handler: optionClosure), UIAction(title: "Gray", handler: optionClosure), UIAction(title: "Blue", handler: optionClosure), UIAction(title: "Pink", handler: optionClosure)])
+                                                [UIAction(title: "Match System", state : .on, handler: defaultBackround), UIAction(title: "Gray", handler: grayBackround), UIAction(title: "Blue", handler: blueBackround), UIAction(title: "Pink", handler: pinkBackround)])
             
                 popUpButtonOutlet.showsMenuAsPrimaryAction = true
                 popUpButtonOutlet.changesSelectionAsPrimaryAction = true
