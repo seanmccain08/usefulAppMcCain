@@ -9,6 +9,7 @@ import UIKit
 
 class AddViewController: UIViewController {
 
+    @IBOutlet weak var label0: UILabel!
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var makeField: UITextField!
     @IBOutlet weak var modelField: UITextField!
@@ -22,6 +23,17 @@ class AddViewController: UIViewController {
 
         
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        view.backgroundColor = AppData.backGroundcolor
+        label0.textColor = AppData.textColor
+        yearField.textColor = AppData.textColor
+        makeField.textColor = AppData.textColor
+        modelField.textColor = AppData.textColor
+        milesField.textColor = AppData.textColor
+        moneyInvestedField.textColor = AppData.textColor
+        fuelGradeField.textColor = AppData.textColor
     }
     
     @IBAction func addCarButton(_ sender: UIButton) {

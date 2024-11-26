@@ -12,11 +12,22 @@ class FuelGradeEditorViewController: UIViewController {
     @IBOutlet weak var fuelGradeOutlet: UITextField!
     @IBOutlet weak var odometerField: UITextField!
     @IBOutlet weak var oilMilesField: UITextField!
+    @IBOutlet weak var label0: UILabel!
+    @IBOutlet weak var label1: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        view.backgroundColor = AppData.backGroundcolor
+        label0.textColor = AppData.textColor
+        label1.textColor = AppData.textColor
+        fuelGradeOutlet.textColor = AppData.textColor
+        odometerField.textColor = AppData.textColor
+        oilMilesField.textColor = AppData.textColor
     }
     
     @IBAction func updateInfo(_ sender: Any) {

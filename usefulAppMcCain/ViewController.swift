@@ -59,6 +59,9 @@ public class AppData {
     
     static var cars : [Car] = []
     static var currentCar = cars[0]
+    static var backGroundcolor = UIColor.white
+    static var textColor = UIColor.black
+    static var bgColorString = "System"
     
 }
 
@@ -69,6 +72,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidAppear(_ animated: Bool) {
         
         tableView.reloadData()
+        view.backgroundColor = AppData.backGroundcolor
         
     }
     
@@ -88,6 +92,42 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
             
         }
+        if let background = UserDefaults.standard.string(forKey: "bg"){
+            
+            AppData.bgColorString = background
+            
+        }
+        if(AppData.bgColorString == "white"){
+            
+            AppData.backGroundcolor = UIColor.white
+            AppData.textColor = UIColor.black
+            
+        }
+        else if(AppData.bgColorString == "black"){
+            
+            AppData.backGroundcolor = UIColor.black
+            AppData.textColor = UIColor.white
+            
+        }
+        else if(AppData.bgColorString == "gray"){
+            
+            AppData.backGroundcolor = UIColor.lightGray
+            AppData.textColor = UIColor.black
+            
+        }
+        else if(AppData.bgColorString == "blue"){
+            
+            AppData.backGroundcolor = UIColor(red: 0, green: 0.4, blue: 0.6, alpha: 1)
+            AppData.textColor = UIColor.white
+            
+        }
+        else{
+            
+            AppData.backGroundcolor = UIColor(red: 1, green: 0.6, blue: 1, alpha: 1)
+            AppData.textColor = UIColor.black
+            
+        }
+        view.backgroundColor = AppData.backGroundcolor
         
     }
     
@@ -115,6 +155,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         totalCost.round()
         totalCost/=100
         cell.costLabel.text = "$\(totalCost) Spent"
+        cell.carLabel.textColor = AppData.textColor
+        cell.jobsLabel.textColor = AppData.textColor
+        cell.odometerLabel.textColor = AppData.textColor
+        cell.costLabel.textColor = AppData.textColor
         return cell
         
     }

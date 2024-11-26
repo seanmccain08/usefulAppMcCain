@@ -21,6 +21,7 @@ class jobsViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidAppear(_ animated: Bool) {
         
+        view.backgroundColor = AppData.backGroundcolor
         tableView.reloadData()
         
     }
@@ -41,6 +42,11 @@ class jobsViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.costLabel.text = "$\(job.price)"
         cell.odometerLabel.text = "\(job.odometer) Miles"
         cell.descriptionLabel.text = "\(job.description)\n"
+        cell.titleLabel.textColor = AppData.textColor
+        cell.dateLabel.textColor = AppData.textColor
+        cell.costLabel.textColor = AppData.textColor
+        cell.odometerLabel.textColor = AppData.textColor
+        cell.descriptionLabel.textColor = AppData.textColor
         return cell
         
     }

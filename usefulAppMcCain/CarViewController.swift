@@ -26,6 +26,12 @@ class CarViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     }
     override func viewDidAppear(_ animated: Bool) {
         
+        odometerLabel.textColor = AppData.textColor
+        totalCostLabel.textColor = AppData.textColor
+        carLabel.textColor = AppData.textColor
+        recentJobsLabel.textColor = AppData.textColor
+        
+        view.backgroundColor = AppData.backGroundcolor
         odometerLabel.text = "Odometer:\n\(AppData.currentCar.miles) Miles"
         var totalCost = 0.0
         for job in AppData.currentCar.jobs{
@@ -87,6 +93,11 @@ class CarViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         cell.costLabel.text = "$\(job.price)"
         cell.odometerLabel.text = "\(job.odometer) Miles"
         cell.descriptionLabel.text = "\(job.description)\n"
+        cell.titleLabel.textColor = AppData.textColor
+        cell.dateLabel.textColor = AppData.textColor
+        cell.costLabel.textColor = AppData.textColor
+        cell.odometerLabel.textColor = AppData.textColor
+        cell.descriptionLabel.textColor = AppData.textColor
         return cell
         
     }

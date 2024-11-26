@@ -24,6 +24,14 @@ class StatisticsViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         
+        jobsLabel.textColor = AppData.textColor
+        totalCostLabel.textColor = AppData.textColor
+        recentDateLabel.textColor = AppData.textColor
+        fuelGradeLabel.textColor = AppData.textColor
+        odometerLabel.textColor = AppData.textColor
+        lastOilChangeOdometerLabel.textColor = AppData.textColor
+        
+        view.backgroundColor = AppData.backGroundcolor
         var totalCost = 0.0
         for job in AppData.currentCar.jobs{
             

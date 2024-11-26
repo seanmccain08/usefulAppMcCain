@@ -15,6 +15,7 @@ class NewJobViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var descriptionField: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var priceField: UITextField!
+    @IBOutlet weak var label0: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +26,14 @@ class NewJobViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    
+    override func viewDidAppear(_ animated: Bool) {
+        view.backgroundColor = AppData.backGroundcolor
+        label0.textColor = AppData.textColor
+        titleField.textColor = AppData.textColor
+        odometerField.textColor = AppData.textColor
+        priceField.textColor = AppData.textColor
+        descriptionField.textColor = AppData.textColor
+    }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         titleField.resignFirstResponder()
