@@ -15,6 +15,7 @@ class CarViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var odometerLabel: UILabel!
     @IBOutlet weak var totalCostLabel: UILabel!
+    @IBOutlet weak var carImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,6 +73,11 @@ class CarViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         else{
             
             recentJobsLabel.text = "No jobs to display"
+            
+        }
+        if(carImage.image == nil){
+            
+            carImage.isHidden = true
             
         }
         tableView.reloadData()

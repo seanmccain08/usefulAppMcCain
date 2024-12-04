@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -584,10 +583,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="carPreview" translatesAutoresizingMaskIntoConstraints="NO" id="h5W-lG-RrV">
-                                        <rect key="frame" x="0.0" y="78.999999999999986" width="393" height="212.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="78.999999999999986" width="393" height="208.66666666666663"/>
                                     </imageView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="MPq-E7-mqH">
-                                        <rect key="frame" x="0.0" y="297.66666666666669" width="393" height="228.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="293.66666666666669" width="393" height="232.33333333333331"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" rowHeight="96" id="jA8-cN-jdg" customClass="CarCell2" customModule="usefulAppMcCain" customModuleProvider="target">
@@ -729,7 +728,7 @@
                                     <constraint firstItem="1ka-on-Sm2" firstAttribute="height" secondItem="HwA-bK-LNT" secondAttribute="height" multiplier="0.0720721" id="0zA-5O-0Wh"/>
                                     <constraint firstItem="tot-O7-kf5" firstAttribute="height" secondItem="HwA-bK-LNT" secondAttribute="height" multiplier="0.075" id="9yR-5F-dnd"/>
                                     <constraint firstItem="KxC-JV-M5P" firstAttribute="height" secondItem="HwA-bK-LNT" secondAttribute="height" multiplier="0.0305305" id="DTo-Bh-aSg"/>
-                                    <constraint firstItem="MPq-E7-mqH" firstAttribute="height" secondItem="HwA-bK-LNT" secondAttribute="height" multiplier="0.35" id="Xk7-RR-Gdp"/>
+                                    <constraint firstItem="h5W-lG-RrV" firstAttribute="height" secondItem="HwA-bK-LNT" secondAttribute="height" multiplier="0.32" id="f2C-2d-IOH"/>
                                     <constraint firstItem="rq0-5Z-Xbq" firstAttribute="height" secondItem="HwA-bK-LNT" secondAttribute="height" multiplier="0.1" id="zuJ-gQ-0QE"/>
                                 </constraints>
                             </stackView>
@@ -746,6 +745,7 @@
                     <tabBarItem key="tabBarItem" title="Overview" image="book.fill" catalog="system" id="gin-8s-158"/>
                     <navigationItem key="navigationItem" id="BX9-oh-CsC"/>
                     <connections>
+                        <outlet property="carImage" destination="h5W-lG-RrV" id="S7j-aq-hQx"/>
                         <outlet property="carLabel" destination="1ka-on-Sm2" id="p63-lE-a5c"/>
                         <outlet property="odometerLabel" destination="LxY-x7-bVB" id="yUE-fU-kyd"/>
                         <outlet property="recentJobsLabel" destination="KxC-JV-M5P" id="x1z-aS-Pus"/>
@@ -900,7 +900,7 @@
             </objects>
             <point key="canvasLocation" x="2464.8854961832062" y="1147.8873239436621"/>
         </scene>
-        <!--Camera-->
+        <!--Image-->
         <scene sceneID="qpa-QD-s0C">
             <objects>
                 <viewController id="HqZ-tc-z9u" customClass="CameraViewController" customModule="usefulAppMcCain" customModuleProvider="target" sceneMemberID="viewController">
@@ -908,66 +908,79 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zYV-2A-wnY">
-                                <rect key="frame" x="178" y="527" width="39" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled">
-                                    <imageReference key="image" image="camera.circle.fill" catalog="system" symbolScale="large" renderingMode="hierarchical">
-                                        <hierarchicalColors>
-                                            <color name="AccentColor"/>
-                                            <color red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </hierarchicalColors>
-                                    </imageReference>
-                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="large"/>
-                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yYJ-qF-7tF">
-                                <rect key="frame" x="117" y="579" width="37" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled">
-                                    <imageReference key="image" image="checkmark.icloud.fill" catalog="system" symbolScale="large" renderingMode="hierarchical">
-                                        <hierarchicalColors>
-                                            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <color systemColor="systemGreenColor"/>
-                                        </hierarchicalColors>
-                                    </imageReference>
-                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hXd-Pa-A5C">
-                                <rect key="frame" x="76" y="362" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nn6-nS-UFs">
-                                <rect key="frame" x="240" y="591" width="22" height="19"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled">
-                                    <imageReference key="image" image="delete.left.fill" catalog="system" symbolScale="small" renderingMode="hierarchical">
-                                        <hierarchicalColors>
-                                            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <color systemColor="systemRedColor"/>
-                                        </hierarchicalColors>
-                                    </imageReference>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UTu-r5-7mf">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hXd-Pa-A5C">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="532.66666666666663"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="iu9-Ah-Wst">
+                                        <rect key="frame" x="0.0" y="532.66666666666663" width="393" height="133.33333333333337"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ILY-Ng-ai9">
+                                                <rect key="frame" x="0.0" y="0.0" width="98.333333333333329" height="133.33333333333334"/>
+                                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                <color key="tintColor" systemColor="systemBlueColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" image="camera.fill" catalog="system">
+                                                    <color key="baseBackgroundColor" systemColor="systemBlueColor"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DvE-7a-UDe">
+                                                <rect key="frame" x="98.333333333333343" y="0.0" width="98.333333333333343" height="133.33333333333334"/>
+                                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                <color key="tintColor" systemColor="systemBlueColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" image="photo.fill" catalog="system">
+                                                    <color key="baseBackgroundColor" systemColor="systemBlueColor"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQA-tl-ZnB">
+                                                <rect key="frame" x="196.66666666666666" y="0.0" width="97.999999999999972" height="133.33333333333334"/>
+                                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                <color key="tintColor" systemColor="systemBlueColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" image="arrow.down.square.fill" catalog="system">
+                                                    <color key="baseBackgroundColor" systemColor="systemBlueColor"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="To6-wu-Ea8">
+                                                <rect key="frame" x="294.66666666666669" y="0.0" width="98.333333333333314" height="133.33333333333334"/>
+                                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                <color key="tintColor" systemColor="systemRedColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" image="trash.fill" catalog="system">
+                                                    <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="hXd-Pa-A5C" firstAttribute="height" secondItem="UTu-r5-7mf" secondAttribute="height" multiplier="0.8" id="eMu-v1-Gxn"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1vo-i1-prf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1vo-i1-prf" firstAttribute="trailing" secondItem="UTu-r5-7mf" secondAttribute="trailing" id="9Cz-Hd-e4N"/>
+                            <constraint firstItem="UTu-r5-7mf" firstAttribute="leading" secondItem="1vo-i1-prf" secondAttribute="leading" id="GfP-IO-4P2"/>
+                            <constraint firstItem="UTu-r5-7mf" firstAttribute="top" secondItem="1vo-i1-prf" secondAttribute="top" id="UbE-as-1IL"/>
+                            <constraint firstItem="1vo-i1-prf" firstAttribute="bottom" secondItem="UTu-r5-7mf" secondAttribute="bottom" id="za0-z7-TUb"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Camera" selectedImage="camera.fill" catalog="system" id="mP2-CZ-Nez"/>
+                    <tabBarItem key="tabBarItem" title="Image" image="car.fill" catalog="system" selectedImage="car.fill" id="mP2-CZ-Nez"/>
+                    <connections>
+                        <outlet property="deleteButton" destination="To6-wu-Ea8" id="Mta-vk-xRd"/>
+                        <outlet property="photoLibraryButton" destination="DvE-7a-UDe" id="jBL-zk-hNE"/>
+                        <outlet property="saveButton" destination="DQA-tl-ZnB" id="qZH-YX-Tky"/>
+                        <outlet property="takePictureButton" destination="ILY-Ng-ai9" id="lnn-qO-fx0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2DV-LY-wU0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3438.9312977099235" y="1147.8873239436621"/>
+            <point key="canvasLocation" x="3237" y="1148"/>
         </scene>
         <!--New Job-->
         <scene sceneID="5eL-3L-EvP">
@@ -1112,22 +1125,23 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.down.square.fill" catalog="system" width="128" height="114"/>
         <image name="book.fill" catalog="system" width="128" height="95"/>
         <image name="calendar" catalog="system" width="128" height="107"/>
-        <image name="camera.circle.fill" catalog="system" width="128" height="123"/>
         <image name="camera.fill" catalog="system" width="128" height="93"/>
         <image name="car" catalog="system" width="128" height="95"/>
+        <image name="car.fill" catalog="system" width="128" height="95"/>
         <image name="carPreview" width="640" height="480"/>
         <image name="case" catalog="system" width="128" height="100"/>
         <image name="case.fill" catalog="system" width="128" height="100"/>
-        <image name="checkmark.icloud.fill" catalog="system" width="128" height="90"/>
         <image name="creditcard" catalog="system" width="128" height="88"/>
-        <image name="delete.left.fill" catalog="system" width="128" height="102"/>
         <image name="engine.combustion" catalog="system" width="128" height="79"/>
         <image name="engine.combustion.fill" catalog="system" width="128" height="80"/>
         <image name="fuelpump" catalog="system" width="128" height="125"/>
         <image name="gear" catalog="system" width="128" height="122"/>
         <image name="oilcan" catalog="system" width="128" height="58"/>
+        <image name="photo.fill" catalog="system" width="128" height="93"/>
+        <image name="trash.fill" catalog="system" width="117" height="128"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -1135,16 +1149,16 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

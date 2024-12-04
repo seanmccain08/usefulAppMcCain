@@ -9,6 +9,11 @@ import UIKit
 
 class CameraViewController: UIViewController {
 
+    @IBOutlet weak var takePictureButton: UIButton!
+    @IBOutlet weak var photoLibraryButton: UIButton!
+    @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var deleteButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
