@@ -27,6 +27,9 @@ class CarViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     }
     override func viewDidAppear(_ animated: Bool) {
         
+        if let savedImage = loadImage(fileName: "image.png") {
+            carImage.image = savedImage
+        }
         odometerLabel.textColor = AppData.textColor
         totalCostLabel.textColor = AppData.textColor
         carLabel.textColor = AppData.textColor
@@ -85,6 +88,16 @@ class CarViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         
         tableView.reloadData()
       
+    }
+    
+    func loadImage(fileName: String) -> UIImage? {
+        let directory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let fileURL = directory.appendingPathComponent(fileName)
+        
+        if let data = try? Data(contentsOf: fileURL) {
+            return UIImage(data: data)
+        }
+        return nil
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

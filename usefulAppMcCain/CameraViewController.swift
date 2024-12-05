@@ -42,8 +42,24 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
     }
     @IBAction func saveButtonAction(_ sender: UIButton) {
         Car.imageIVC = imageViewOutlet.image ?? UIImage()
+        AppData.imageURL = saveImage(image: imageViewOutlet.image!, fileName: "image.png")
+        
     }
     @IBAction func deleteButtonAction(_ sender: UIButton) {
         imageViewOutlet.image = nil
     }
+    
+    func saveImage(image: UIImage, fileName: String) -> URL? {
+        guard let data = image.jpegData(compressionQuality: 1.0) else { return nil }
+        let documents = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+        let fileURL = documents?.appendingPathComponent(fileName)
+        do {
+            try data.write(to: fileURL!)
+            return fileURL
+        } catch {
+            print("Error saving image: \(error)")
+            return nil
+        }
+    }
+    
 }

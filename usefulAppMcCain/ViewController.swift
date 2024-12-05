@@ -64,6 +64,7 @@ public class AppData {
     static var backGroundcolor = UIColor.white
     static var textColor = UIColor.black
     static var bgColorString = "System"
+    static var imageURL : URL!
 }
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
