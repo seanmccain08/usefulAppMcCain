@@ -1106,7 +1106,7 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="s1i-fl-aqZ" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" style="editor" id="4Hx-bj-iDO"/>
+                    <navigationItem key="navigationItem" id="4Hx-bj-iDO"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fvK-oZ-P3j">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
