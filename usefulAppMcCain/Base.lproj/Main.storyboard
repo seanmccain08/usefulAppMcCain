@@ -925,6 +925,9 @@
                                                 <buttonConfiguration key="configuration" style="filled" image="camera.fill" catalog="system">
                                                     <color key="baseBackgroundColor" systemColor="systemBlueColor"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="cameraButtonAction:" destination="HqZ-tc-z9u" eventType="touchUpInside" id="bAv-Fs-39e"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DvE-7a-UDe">
                                                 <rect key="frame" x="98.333333333333343" y="0.0" width="98.333333333333343" height="133.33333333333334"/>
@@ -934,6 +937,9 @@
                                                 <buttonConfiguration key="configuration" style="filled" image="photo.fill" catalog="system">
                                                     <color key="baseBackgroundColor" systemColor="systemBlueColor"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="imageSelectorAction:" destination="HqZ-tc-z9u" eventType="touchUpInside" id="yrt-pO-06f"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQA-tl-ZnB">
                                                 <rect key="frame" x="196.66666666666666" y="0.0" width="97.999999999999972" height="133.33333333333334"/>
@@ -943,6 +949,9 @@
                                                 <buttonConfiguration key="configuration" style="filled" image="arrow.down.square.fill" catalog="system">
                                                     <color key="baseBackgroundColor" systemColor="systemBlueColor"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="saveButtonAction:" destination="HqZ-tc-z9u" eventType="touchUpInside" id="JJ0-zf-bVR"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="To6-wu-Ea8">
                                                 <rect key="frame" x="294.66666666666669" y="0.0" width="98.333333333333314" height="133.33333333333334"/>
@@ -952,6 +961,9 @@
                                                 <buttonConfiguration key="configuration" style="filled" image="trash.fill" catalog="system">
                                                     <color key="baseBackgroundColor" systemColor="systemRedColor"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="deleteButtonAction:" destination="HqZ-tc-z9u" eventType="touchUpInside" id="mla-gx-4vX"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -973,6 +985,7 @@
                     <tabBarItem key="tabBarItem" title="Image" image="car.fill" catalog="system" selectedImage="car.fill" id="mP2-CZ-Nez"/>
                     <connections>
                         <outlet property="deleteButton" destination="To6-wu-Ea8" id="Mta-vk-xRd"/>
+                        <outlet property="imageViewOutlet" destination="hXd-Pa-A5C" id="j67-4X-o8e"/>
                         <outlet property="photoLibraryButton" destination="DvE-7a-UDe" id="jBL-zk-hNE"/>
                         <outlet property="saveButton" destination="DQA-tl-ZnB" id="qZH-YX-Tky"/>
                         <outlet property="takePictureButton" destination="ILY-Ng-ai9" id="lnn-qO-fx0"/>

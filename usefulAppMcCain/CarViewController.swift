@@ -80,8 +80,11 @@ class CarViewController: UIViewController, UITableViewDelegate, UITableViewDataS
             carImage.isHidden = true
             
         }
-        tableView.reloadData()
         
+        carImage.image = Car.imageIVC
+        
+        tableView.reloadData()
+      
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

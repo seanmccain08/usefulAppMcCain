@@ -41,6 +41,8 @@ class Car : Codable {
     var fuelGrade : String
     var oilMiles : Int
     var moneySpent : Double
+    static var imageIVC = UIImage()
+
     
     init(make: String, model: String, year: String, miles: Int, fuelGrade: String, moneySpent: Double) {
         self.make = make
@@ -62,7 +64,6 @@ public class AppData {
     static var backGroundcolor = UIColor.white
     static var textColor = UIColor.black
     static var bgColorString = "System"
-    
 }
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
