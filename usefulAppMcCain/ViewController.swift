@@ -41,7 +41,7 @@ class Car : Codable {
     var fuelGrade : String
     var oilMiles : Int
     var moneySpent : Double
-    static var imageIVC = UIImage()
+    var imageIndex : Int!
 
     
     init(make: String, model: String, year: String, miles: Int, fuelGrade: String, moneySpent: Double) {

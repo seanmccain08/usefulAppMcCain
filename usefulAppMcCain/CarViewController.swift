@@ -27,9 +27,6 @@ class CarViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     }
     override func viewDidAppear(_ animated: Bool) {
         
-        if let savedImage = loadImage(fileName: "image.png") {
-            carImage.image = savedImage
-        }
         odometerLabel.textColor = AppData.textColor
         totalCostLabel.textColor = AppData.textColor
         carLabel.textColor = AppData.textColor
@@ -78,13 +75,17 @@ class CarViewController: UIViewController, UITableViewDelegate, UITableViewDataS
             recentJobsLabel.text = "No jobs to display"
             
         }
+        
+        if let savedImage = loadImage(fileName: "image.png") {
+            carImage.image = savedImage
+            
+        }
+        
         if(carImage.image == nil){
             
             carImage.isHidden = true
             
         }
-        
-        carImage.image = Car.imageIVC
         
         tableView.reloadData()
       

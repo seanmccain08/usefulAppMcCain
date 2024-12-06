@@ -21,6 +21,15 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        
+        if let savedImage = loadImage(fileName: "image.png") {
+            imageViewOutlet.image = savedImage
+            
+        }
+        
+    }
+    
     @IBAction func cameraButtonAction(_ sender: UIButton) {
         if UIImagePickerController.isSourceTypeAvailable(.camera){
             imagePicker.sourceType = UIImagePickerController.SourceType.camera
@@ -41,12 +50,23 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
         present(imagePicker, animated: true, completion: nil)
     }
     @IBAction func saveButtonAction(_ sender: UIButton) {
-        Car.imageIVC = imageViewOutlet.image ?? UIImage()
+
+//Make filenames dependant on the current car index
         AppData.imageURL = saveImage(image: imageViewOutlet.image!, fileName: "image.png")
         
     }
     @IBAction func deleteButtonAction(_ sender: UIButton) {
         imageViewOutlet.image = nil
+    }
+    
+    func loadImage(fileName: String) -> UIImage? {
+        let directory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let fileURL = directory.appendingPathComponent(fileName)
+        
+        if let data = try? Data(contentsOf: fileURL) {
+            return UIImage(data: data)
+        }
+        return nil
     }
     
     func saveImage(image: UIImage, fileName: String) -> URL? {
