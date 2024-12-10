@@ -25,7 +25,7 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
         
         if let savedImage = loadImages(prefix: "image", count: 1) {
             
-            imageViewOutlet.image = savedImage[AppData.currentCar.imageIndex]
+            imageViewOutlet.image = savedImage[0]
             
         }
         

@@ -76,8 +76,9 @@ class CarViewController: UIViewController, UITableViewDelegate, UITableViewDataS
             
         }
         
-        if let savedImage = loadImage(fileName: "image.png") {
-            carImage.image = savedImage
+        if let savedImage = loadImages(prefix: "image", count: 1) {
+            
+            carImage.image = savedImage[0]
             
         }
         
@@ -91,14 +92,30 @@ class CarViewController: UIViewController, UITableViewDelegate, UITableViewDataS
       
     }
     
-    func loadImage(fileName: String) -> UIImage? {
-        let directory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        let fileURL = directory.appendingPathComponent(fileName)
+    func loadImages(prefix: String, count: Int) -> [UIImage]? {
+        var images: [UIImage] = []
         
-        if let data = try? Data(contentsOf: fileURL) {
-            return UIImage(data: data)
+        let directory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        
+        for index in 0..<count {
+            let fileName = "\(prefix)_\(index).png"
+            let fileURL = directory.appendingPathComponent(fileName)
+            
+            if FileManager.default.fileExists(atPath: fileURL.path) {
+                do {
+                    let data = try Data(contentsOf: fileURL)
+                    if let image = UIImage(data: data) {
+                        images.append(image)
+                        print("Loaded image \(index) from \(fileURL)")
+                    }
+                } catch {
+                    print("Error loading image \(index): \(error)")
+                }
+            } else {
+                print("File \(fileName) does not exist")
+            }
         }
-        return nil
+        return images.isEmpty ? nil : images
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
