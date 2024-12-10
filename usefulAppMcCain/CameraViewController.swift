@@ -23,8 +23,9 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
     
     override func viewDidAppear(_ animated: Bool) {
         
-        if let savedImage = loadImage(fileName: "image.png") {
-            imageViewOutlet.image = savedImage
+        if let savedImage = loadImages(prefix: "image", count: 1) {
+            
+            imageViewOutlet.image = savedImage[AppData.currentCar.imageIndex]
             
         }
         
@@ -43,6 +44,7 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true)
         self.imageViewOutlet.image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+        AppData.images.append(info[UIImagePickerController.InfoKey.originalImage] as! UIImage)
         
     }
     @IBAction func imageSelectorAction(_ sender: UIButton) {
@@ -52,34 +54,66 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
     @IBAction func saveButtonAction(_ sender: UIButton) {
 
 //Make filenames dependant on the current car index
-        AppData.imageURL = saveImage(image: imageViewOutlet.image!, fileName: "image.png")
+        print(saveImages(images: AppData.images, prefix: "image"))
         
     }
     @IBAction func deleteButtonAction(_ sender: UIButton) {
         imageViewOutlet.image = nil
     }
     
-    func loadImage(fileName: String) -> UIImage? {
-        let directory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        let fileURL = directory.appendingPathComponent(fileName)
+    func loadImages(prefix: String, count: Int) -> [UIImage]? {
+        var images: [UIImage] = []
         
-        if let data = try? Data(contentsOf: fileURL) {
-            return UIImage(data: data)
+        let directory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        
+        for index in 0..<count {
+            let fileName = "\(prefix)_\(index).png"
+            let fileURL = directory.appendingPathComponent(fileName)
+            
+            if FileManager.default.fileExists(atPath: fileURL.path) {
+                do {
+                    let data = try Data(contentsOf: fileURL)
+                    if let image = UIImage(data: data) {
+                        images.append(image)
+                        print("Loaded image \(index) from \(fileURL)")
+                    }
+                } catch {
+                    print("Error loading image \(index): \(error)")
+                }
+            } else {
+                print("File \(fileName) does not exist")
+            }
         }
-        return nil
+        return images.isEmpty ? nil : images
     }
     
-    func saveImage(image: UIImage, fileName: String) -> URL? {
-        guard let data = image.jpegData(compressionQuality: 1.0) else { return nil }
-        let documents = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
-        let fileURL = documents?.appendingPathComponent(fileName)
-        do {
-            try data.write(to: fileURL!)
-            return fileURL
-        } catch {
-            print("Error saving image: \(error)")
-            return nil
+    func saveImages(images: [UIImage], prefix: String) -> [URL]? {
+        var savedURLs: [URL] = []
+        
+        for (index, image) in images.enumerated() {
+            let fileName = "\(prefix)_\(index).png" // Unique filename
+            guard let data = image.pngData() else {
+                print("Failed to convert image \(index) to PNG data")
+                continue
+            }
+            
+            let directory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+            let fileURL = directory.appendingPathComponent(fileName)
+            
+            do {
+                if FileManager.default.fileExists(atPath: fileURL.path) {
+                    try FileManager.default.removeItem(at: fileURL)
+                }
+                try data.write(to: fileURL)
+                savedURLs.append(fileURL)
+                print("Image \(index) saved at \(fileURL)")
+            } catch {
+                print("Error saving image \(index): \(error)")
+            }
         }
+        AppData.imageCount+=1
+        UserDefaults.standard.set(AppData.imageCount, forKey: "imageCount")
+        return savedURLs.isEmpty ? nil : savedURLs
     }
     
 }

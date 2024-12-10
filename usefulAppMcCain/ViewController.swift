@@ -41,8 +41,7 @@ class Car : Codable {
     var fuelGrade : String
     var oilMiles : Int
     var moneySpent : Double
-    var imageIndex : Int!
-
+    var imageIndex : Int
     
     init(make: String, model: String, year: String, miles: Int, fuelGrade: String, moneySpent: Double) {
         self.make = make
@@ -53,6 +52,7 @@ class Car : Codable {
         self.fuelGrade = fuelGrade
         self.oilMiles = 0
         self.moneySpent = moneySpent
+        self.imageIndex = -1
     }
     
 }
@@ -64,7 +64,10 @@ public class AppData {
     static var backGroundcolor = UIColor.white
     static var textColor = UIColor.black
     static var bgColorString = "System"
-    static var imageURL : URL!
+    static var images : [UIImage] = []
+    static var imageURLs : [URL] = []
+    static var imageCount = 0
+    
 }
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -97,6 +100,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if let background = UserDefaults.standard.string(forKey: "bg"){
             
             AppData.bgColorString = background
+            
+        }
+        if let imageCount = UserDefaults.standard.value(forKey: "imageCount"){
+            
+            AppData.imageCount = imageCount as! Int
             
         }
         if(AppData.bgColorString == "white"){

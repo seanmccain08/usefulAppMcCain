@@ -32,6 +32,7 @@ class SettingsViewController: UIViewController {
         
         //make different actions like this to change colors, put 1 function in 1 spot in children array
         let  whiteBackground = {(action : UIAction) in
+
             AppData.backGroundcolor = UIColor.white
             AppData.textColor = UIColor.black
             self.view.backgroundColor = AppData.backGroundcolor
