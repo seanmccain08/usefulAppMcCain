@@ -31,22 +31,12 @@ class SettingsViewController: UIViewController {
     func setPopUpButton(){
         
         //make different actions like this to change colors, put 1 function in 1 spot in children array
-        let  whiteBackground = {(action : UIAction) in
+        let  systemBG = {(action : UIAction) in
 
-            AppData.backGroundcolor = UIColor.white
-            AppData.textColor = UIColor.black
+            AppData.backGroundcolor = UIColor.systemBackground
+            AppData.textColor = UIColor.label
             self.view.backgroundColor = AppData.backGroundcolor
-            AppData.bgColorString = "white"
-            UserDefaults.standard.set(AppData.bgColorString, forKey: "bg")
-            self.label0.textColor = AppData.textColor
-            self.popUpButtonOutlet.setTitleColor(UIColor.systemBlue, for: .normal)
-            
-        }
-        let  blackBackground = {(action : UIAction) in
-            AppData.backGroundcolor = UIColor.black
-            AppData.textColor = UIColor.white
-            self.view.backgroundColor = AppData.backGroundcolor
-            AppData.bgColorString = "black"
+            AppData.bgColorString = "system"
             UserDefaults.standard.set(AppData.bgColorString, forKey: "bg")
             self.label0.textColor = AppData.textColor
             self.popUpButtonOutlet.setTitleColor(UIColor.systemBlue, for: .normal)
@@ -87,7 +77,7 @@ class SettingsViewController: UIViewController {
             
         }
             
-        popUpButtonOutlet.menu = UIMenu(children : [UIAction(title: "White", state : .on, handler: whiteBackground), UIAction(title: "Black", state : .on, handler: blackBackground), UIAction(title: "Gray", handler: grayBackround), UIAction(title: "Blue", handler: blueBackground), UIAction(title: "Pink", handler: pinkBackround)])
+        popUpButtonOutlet.menu = UIMenu(children : [UIAction(title: "Match System", state : .on, handler: systemBG), UIAction(title: "Gray", handler: grayBackround), UIAction(title: "Blue", handler: blueBackground), UIAction(title: "Pink", handler: pinkBackround)])
             
                 popUpButtonOutlet.showsMenuAsPrimaryAction = true
                 popUpButtonOutlet.changesSelectionAsPrimaryAction = true

@@ -15,7 +15,6 @@ class CarViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var odometerLabel: UILabel!
     @IBOutlet weak var totalCostLabel: UILabel!
-    @IBOutlet weak var carImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,46 +75,8 @@ class CarViewController: UIViewController, UITableViewDelegate, UITableViewDataS
             
         }
         
-        if let savedImage = loadImages(prefix: "image", count: 1) {
-            
-            carImage.image = savedImage[0]
-            
-        }
-        
-        if(carImage.image == nil){
-            
-            carImage.isHidden = true
-            
-        }
-        
         tableView.reloadData()
       
-    }
-    
-    func loadImages(prefix: String, count: Int) -> [UIImage]? {
-        var images: [UIImage] = []
-        
-        let directory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        
-        for index in 0..<count {
-            let fileName = "\(prefix)_\(index).png"
-            let fileURL = directory.appendingPathComponent(fileName)
-            
-            if FileManager.default.fileExists(atPath: fileURL.path) {
-                do {
-                    let data = try Data(contentsOf: fileURL)
-                    if let image = UIImage(data: data) {
-                        images.append(image)
-                        print("Loaded image \(index) from \(fileURL)")
-                    }
-                } catch {
-                    print("Error loading image \(index): \(error)")
-                }
-            } else {
-                print("File \(fileName) does not exist")
-            }
-        }
-        return images.isEmpty ? nil : images
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

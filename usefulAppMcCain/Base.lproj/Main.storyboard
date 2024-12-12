@@ -537,7 +537,6 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mhd-42-9BN"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="mhd-42-9BN" firstAttribute="bottom" secondItem="LPg-gN-Psq" secondAttribute="bottom" constant="100" id="8wx-0j-mwl"/>
                             <constraint firstItem="LPg-gN-Psq" firstAttribute="top" secondItem="mhd-42-9BN" secondAttribute="top" constant="50" id="KD6-uy-Il9"/>
@@ -582,11 +581,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h5W-lG-RrV">
-                                        <rect key="frame" x="0.0" y="78.999999999999986" width="393" height="208.66666666666663"/>
-                                    </imageView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="MPq-E7-mqH">
-                                        <rect key="frame" x="0.0" y="293.66666666666669" width="393" height="232.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="79" width="393" height="447"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" rowHeight="96" id="jA8-cN-jdg" customClass="CarCell2" customModule="usefulAppMcCain" customModuleProvider="target">
@@ -728,13 +724,11 @@
                                     <constraint firstItem="1ka-on-Sm2" firstAttribute="height" secondItem="HwA-bK-LNT" secondAttribute="height" multiplier="0.0720721" id="0zA-5O-0Wh"/>
                                     <constraint firstItem="tot-O7-kf5" firstAttribute="height" secondItem="HwA-bK-LNT" secondAttribute="height" multiplier="0.075" id="9yR-5F-dnd"/>
                                     <constraint firstItem="KxC-JV-M5P" firstAttribute="height" secondItem="HwA-bK-LNT" secondAttribute="height" multiplier="0.0305305" id="DTo-Bh-aSg"/>
-                                    <constraint firstItem="h5W-lG-RrV" firstAttribute="height" secondItem="HwA-bK-LNT" secondAttribute="height" multiplier="0.32" id="f2C-2d-IOH"/>
                                     <constraint firstItem="rq0-5Z-Xbq" firstAttribute="height" secondItem="HwA-bK-LNT" secondAttribute="height" multiplier="0.1" id="zuJ-gQ-0QE"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fbR-hD-LyV"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="HwA-bK-LNT" firstAttribute="top" secondItem="VY9-7v-g3Z" secondAttribute="top" constant="100" id="AjA-NO-UI0"/>
                             <constraint firstItem="HwA-bK-LNT" firstAttribute="trailing" secondItem="fbR-hD-LyV" secondAttribute="trailing" id="OSr-ay-yU4"/>
@@ -745,7 +739,6 @@
                     <tabBarItem key="tabBarItem" title="Overview" image="book.fill" catalog="system" id="gin-8s-158"/>
                     <navigationItem key="navigationItem" id="BX9-oh-CsC"/>
                     <connections>
-                        <outlet property="carImage" destination="h5W-lG-RrV" id="S7j-aq-hQx"/>
                         <outlet property="carLabel" destination="1ka-on-Sm2" id="p63-lE-a5c"/>
                         <outlet property="odometerLabel" destination="LxY-x7-bVB" id="yUE-fU-kyd"/>
                         <outlet property="recentJobsLabel" destination="KxC-JV-M5P" id="x1z-aS-Pus"/>
@@ -882,7 +875,6 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jG7-as-sRp"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="0WI-Nu-mFp" firstAttribute="trailing" secondItem="jG7-as-sRp" secondAttribute="trailing" id="EFS-Nk-Ax9"/>
                             <constraint firstItem="jG7-as-sRp" firstAttribute="bottom" secondItem="0WI-Nu-mFp" secondAttribute="bottom" id="Fxs-JU-IJH"/>
@@ -918,7 +910,7 @@
                                         <rect key="frame" x="0.0" y="532.66666666666663" width="393" height="133.33333333333337"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ILY-Ng-ai9">
-                                                <rect key="frame" x="0.0" y="0.0" width="96.666666666666671" height="133.33333333333334"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="129.66666666666666" height="133.33333333333334"/>
                                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                                 <color key="tintColor" systemColor="systemBlueColor"/>
                                                 <state key="normal" title="Button"/>
@@ -930,7 +922,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DvE-7a-UDe">
-                                                <rect key="frame" x="98.666666666666686" y="0.0" width="97" height="133.33333333333334"/>
+                                                <rect key="frame" x="131.66666666666669" y="0.0" width="129.66666666666669" height="133.33333333333334"/>
                                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                                 <color key="tintColor" systemColor="systemBlueColor"/>
                                                 <state key="normal" title="Button"/>
@@ -941,20 +933,8 @@
                                                     <action selector="imageSelectorAction:" destination="HqZ-tc-z9u" eventType="touchUpInside" id="yrt-pO-06f"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQA-tl-ZnB">
-                                                <rect key="frame" x="197.66666666666666" y="0.0" width="96.666666666666657" height="133.33333333333334"/>
-                                                <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                                <color key="tintColor" systemColor="systemBlueColor"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" image="arrow.down.square.fill" catalog="system">
-                                                    <color key="baseBackgroundColor" systemColor="systemBlueColor"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="saveButtonAction:" destination="HqZ-tc-z9u" eventType="touchUpInside" id="JJ0-zf-bVR"/>
-                                                </connections>
-                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="To6-wu-Ea8">
-                                                <rect key="frame" x="296.33333333333331" y="0.0" width="96.666666666666686" height="133.33333333333334"/>
+                                                <rect key="frame" x="263.33333333333331" y="0.0" width="129.66666666666669" height="133.33333333333334"/>
                                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                                 <color key="tintColor" systemColor="systemRedColor"/>
                                                 <state key="normal" title="Button"/>
@@ -987,7 +967,6 @@
                         <outlet property="deleteButton" destination="To6-wu-Ea8" id="Mta-vk-xRd"/>
                         <outlet property="imageViewOutlet" destination="hXd-Pa-A5C" id="j67-4X-o8e"/>
                         <outlet property="photoLibraryButton" destination="DvE-7a-UDe" id="jBL-zk-hNE"/>
-                        <outlet property="saveButton" destination="DQA-tl-ZnB" id="qZH-YX-Tky"/>
                         <outlet property="takePictureButton" destination="ILY-Ng-ai9" id="lnn-qO-fx0"/>
                     </connections>
                 </viewController>
@@ -1138,7 +1117,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow.down.square.fill" catalog="system" width="128" height="114"/>
         <image name="book.fill" catalog="system" width="128" height="95"/>
         <image name="calendar" catalog="system" width="128" height="107"/>
         <image name="camera.fill" catalog="system" width="128" height="93"/>
