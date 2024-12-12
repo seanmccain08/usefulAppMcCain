@@ -27,6 +27,7 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
             
             imageViewOutlet.image = savedImage[0]
             
+            view.backgroundColor = AppData.backGroundcolor
         }
         
     }
