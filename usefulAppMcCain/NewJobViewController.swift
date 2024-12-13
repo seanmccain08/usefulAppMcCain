@@ -45,7 +45,7 @@ class NewJobViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func addButton(_ sender: Any) {
         
-        if titleField.text != "" && odometerField.text != "" && descriptionField.text != "" && priceField.text != ""{
+        if titleField.text != "" && odometerField.text != "" && priceField.text != ""{
             
             let calendar = Calendar.current
             let month = calendar.dateComponents([.month], from: datePicker.date).month
