@@ -45,6 +45,36 @@ class NewJobViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func addButton(_ sender: Any) {
         
+        let calendar = Calendar.current
+        let month = calendar.dateComponents([.month], from: datePicker.date).month
+        let day = calendar.dateComponents([.day], from: datePicker.date).day
+        let year = calendar.dateComponents([.year], from: datePicker.date).year
+        
+        if oilSwitch.isOn{
+            
+            if(priceField.text != ""){
+                
+                var odo = AppData.currentCar.miles
+                if(odometerField.text != ""){
+                    
+                    odo = (Int)(odometerField.text!)!
+                    
+                }
+                var t = "Oil Change"
+                if(titleField.text != ""){
+                    
+                    t = titleField.text!
+                    
+                }
+                AppData.currentCar.oilMiles = odo
+                
+                AppData.currentCar.jobs.append(Jobs(title: t, description: descriptionField.text!, dateM: month!, dateD: day!, dateY: year!, odometer: odo, isOilChange: true, price: Double(priceField.text!)!))
+                
+                
+            }
+            
+        }
+        
         if titleField.text != "" && odometerField.text != "" && priceField.text != ""{
             
             let calendar = Calendar.current
@@ -53,12 +83,6 @@ class NewJobViewController: UIViewController, UITextFieldDelegate {
             let year = calendar.dateComponents([.year], from: datePicker.date).year
             
             AppData.currentCar.jobs.append(Jobs(title: titleField.text!, description: descriptionField.text!, dateM: month!, dateD: day!, dateY: year!, odometer: Int(odometerField.text!)!, isOilChange: oilSwitch.isOn, price: Double(priceField.text!)!))
-            
-            if oilSwitch.isOn{
-                
-                AppData.currentCar.oilMiles = Int(odometerField.text!)!
-                
-            }
             
             AppData.currentCar.miles = Int(odometerField.text!)!
             
