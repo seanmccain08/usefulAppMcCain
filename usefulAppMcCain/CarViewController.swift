@@ -103,4 +103,28 @@ class CarViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         
     }
 
+    @IBAction func checkEngineWarningAction(_ sender: UIButton) {
+        
+    }
+    @IBAction func tirePressureAction(_ sender: UIButton) {
+        
+    }
+    @IBAction func batteryAction(_ sender: UIButton) {
+        
+    }
+    @IBAction func brakeWarningAction(_ sender: UIButton) {
+        
+    }
+    @IBAction func aBSAction(_ sender: UIButton) {
+        
+    }
+    @IBAction func oilAction(_ sender: UIButton) {
+        
+    }
+    @IBAction func airbagAction(_ sender: UIButton) {
+        
+    }
+    @IBAction func tractionControlAction(_ sender: UIButton) {
+        
+    }
 }
