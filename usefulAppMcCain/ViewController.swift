@@ -42,6 +42,16 @@ class Car : Codable {
     var oilMiles : Int
     var moneySpent : Double
     
+    //Check engine lights
+    var checkEngineWarning : Bool
+    var tirePressureWarning : Bool
+    var batteryWarning : Bool
+    var brakeWarning : Bool
+    var ABSWarning : Bool
+    var oilWarning : Bool
+    var airbagWarning : Bool
+    var tcWarning : Bool
+    
     init(make: String, model: String, year: String, miles: Int, fuelGrade: String, moneySpent: Double) {
         self.make = make
         self.model = model
@@ -51,6 +61,15 @@ class Car : Codable {
         self.fuelGrade = fuelGrade
         self.oilMiles = 0
         self.moneySpent = moneySpent
+        
+        self.checkEngineWarning = false
+        self.tirePressureWarning = false
+        self.batteryWarning = false
+        self.brakeWarning = false
+        self.ABSWarning = false
+        self.oilWarning = false
+        self.airbagWarning = false
+        self.tcWarning = false
     }
     
 }

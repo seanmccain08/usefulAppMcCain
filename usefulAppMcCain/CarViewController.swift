@@ -16,12 +16,78 @@ class CarViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     @IBOutlet weak var odometerLabel: UILabel!
     @IBOutlet weak var totalCostLabel: UILabel!
     
+    @IBOutlet weak var checkEngineButton: UIButton!
+    @IBOutlet weak var tirePressureButton: UIButton!
+    @IBOutlet weak var batteryWarningButton: UIButton!
+    @IBOutlet weak var brakeWarningButton: UIButton!
+    @IBOutlet weak var ABSWarningButton: UIButton!
+    @IBOutlet weak var oilWarningButton: UIButton!
+    @IBOutlet weak var airbagWarningButton: UIButton!
+    @IBOutlet weak var tcWarningButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         carLabel.text = "\(AppData.currentCar.make) \(AppData.currentCar.model)"
         tableView.delegate = self
         tableView.dataSource = self
+        
+        if(AppData.currentCar.checkEngineWarning){
+            checkEngineButton.backgroundColor = UIColor.systemOrange
+        }
+        else{
+            checkEngineButton.backgroundColor = UIColor.systemBlue
+        }
+        
+        if(AppData.currentCar.tirePressureWarning){
+            tirePressureButton.backgroundColor = UIColor.systemRed
+        }
+        else{
+            tirePressureButton.backgroundColor = UIColor.systemBlue
+        }
+        
+        if(AppData.currentCar.batteryWarning){
+            batteryWarningButton.backgroundColor = UIColor.systemRed
+        }
+        else{
+            batteryWarningButton.backgroundColor = UIColor.systemBlue
+        }
+        
+        if(AppData.currentCar.brakeWarning){
+            brakeWarningButton.backgroundColor = UIColor.systemRed
+        }
+        else{
+            brakeWarningButton.backgroundColor = UIColor.systemBlue
+        }
+        
+        if(AppData.currentCar.ABSWarning){
+            ABSWarningButton.backgroundColor = UIColor.systemRed
+        }
+        else{
+            ABSWarningButton.backgroundColor = UIColor.systemBlue
+        }
+        
+        if(AppData.currentCar.oilWarning){
+            oilWarningButton.backgroundColor = UIColor.systemRed
+        }
+        else{
+            oilWarningButton.backgroundColor = UIColor.systemBlue
+        }
+        
+        if(AppData.currentCar.airbagWarning){
+            airbagWarningButton.backgroundColor = UIColor.systemRed
+        }
+        else{
+            airbagWarningButton.backgroundColor = UIColor.systemBlue
+        }
+        
+        if(AppData.currentCar.tcWarning){
+            tcWarningButton.backgroundColor = UIColor.systemRed
+        }
+        else{
+            tcWarningButton.backgroundColor = UIColor.systemBlue
+        }
         
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -105,26 +171,147 @@ class CarViewController: UIViewController, UITableViewDelegate, UITableViewDataS
 
     @IBAction func checkEngineWarningAction(_ sender: UIButton) {
         
+        if(AppData.currentCar.checkEngineWarning){
+            
+            AppData.currentCar.checkEngineWarning = false
+            checkEngineButton.backgroundColor = UIColor.systemBlue
+            
+        }
+        else{
+            
+            AppData.currentCar.checkEngineWarning = true
+            checkEngineButton.backgroundColor = UIColor.systemOrange
+            
+        }
+        
+        ViewController.save()
+        
     }
     @IBAction func tirePressureAction(_ sender: UIButton) {
+        
+        if(AppData.currentCar.tirePressureWarning){
+            
+            AppData.currentCar.tirePressureWarning = false
+            tirePressureButton.backgroundColor = UIColor.systemBlue
+            
+        }
+        else{
+            
+            AppData.currentCar.tirePressureWarning = true
+            tirePressureButton.backgroundColor = UIColor.systemRed
+            
+        }
+        
+        ViewController.save()
         
     }
     @IBAction func batteryAction(_ sender: UIButton) {
         
+        if(AppData.currentCar.batteryWarning){
+            
+            AppData.currentCar.batteryWarning = false
+            batteryWarningButton.backgroundColor = UIColor.systemBlue
+            
+        }
+        else{
+            
+            AppData.currentCar.batteryWarning = true
+            batteryWarningButton.backgroundColor = UIColor.systemRed
+            
+        }
+        
+        ViewController.save()
+        
     }
     @IBAction func brakeWarningAction(_ sender: UIButton) {
         
+        if(AppData.currentCar.brakeWarning){
+            
+            AppData.currentCar.brakeWarning = false
+            brakeWarningButton.backgroundColor = UIColor.systemBlue
+            
+        }
+        else{
+            
+            AppData.currentCar.brakeWarning = true
+            brakeWarningButton.backgroundColor = UIColor.systemRed
+            
+        }
+        
+        ViewController.save()
+        
     }
-    @IBAction func aBSAction(_ sender: UIButton) {
+    @IBAction func ABSAction(_ sender: UIButton) {
+        
+        if(AppData.currentCar.ABSWarning){
+            
+            AppData.currentCar.ABSWarning = false
+            ABSWarningButton.backgroundColor = UIColor.systemBlue
+            
+        }
+        else{
+            
+            AppData.currentCar.ABSWarning = true
+            ABSWarningButton.backgroundColor = UIColor.systemRed
+            
+        }
+        
+        ViewController.save()
         
     }
     @IBAction func oilAction(_ sender: UIButton) {
         
+        if(AppData.currentCar.oilWarning){
+            
+            AppData.currentCar.oilWarning = false
+            oilWarningButton.backgroundColor = UIColor.systemBlue
+            
+        }
+        else{
+            
+            AppData.currentCar.oilWarning = true
+            oilWarningButton.backgroundColor = UIColor.systemRed
+            
+        }
+        
+        ViewController.save()
+        
     }
     @IBAction func airbagAction(_ sender: UIButton) {
+        
+        if(AppData.currentCar.airbagWarning){
+            
+            AppData.currentCar.airbagWarning = false
+            airbagWarningButton.backgroundColor = UIColor.systemBlue
+            
+        }
+        else{
+            
+            AppData.currentCar.airbagWarning = true
+            airbagWarningButton.backgroundColor = UIColor.systemRed
+            
+        }
+        
+        ViewController.save()
         
     }
     @IBAction func tractionControlAction(_ sender: UIButton) {
         
+        if(AppData.currentCar.tcWarning){
+            
+            AppData.currentCar.tcWarning = false
+            tcWarningButton.backgroundColor = UIColor.systemBlue
+            
+        }
+        else{
+            
+            AppData.currentCar.tcWarning = true
+            tcWarningButton.backgroundColor = UIColor.systemRed
+            
+        }
+        
+        ViewController.save()
+        
     }
+    
 }

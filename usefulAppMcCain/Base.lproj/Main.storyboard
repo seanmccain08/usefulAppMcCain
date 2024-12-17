@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
@@ -566,7 +565,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="HwA-bK-LNT">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HwA-bK-LNT">
                                 <rect key="frame" x="0.0" y="100" width="393" height="652"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ka-on-Sm2">
@@ -576,13 +575,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KxC-JV-M5P">
-                                        <rect key="frame" x="0.0" y="53" width="393" height="20"/>
+                                        <rect key="frame" x="0.0" y="47" width="393" height="20"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="MPq-E7-mqH">
-                                        <rect key="frame" x="0.0" y="79" width="393" height="260.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="67" width="393" height="260.66666666666669"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" rowHeight="96" id="jA8-cN-jdg" customClass="CarCell2" customModule="usefulAppMcCain" customModuleProvider="target">
@@ -678,43 +677,89 @@
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rq0-5Z-Xbq">
+                                        <rect key="frame" x="0.0" y="327.66666666666669" width="393" height="65.333333333333314"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="engine.combustion" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="tXd-bj-sIW">
+                                                <rect key="frame" x="0.0" y="1.6666666666666643" width="51" height="62.333333333333336"/>
+                                                <color key="tintColor" systemColor="systemOrangeColor"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Odometer:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LxY-x7-bVB">
+                                                <rect key="frame" x="51" y="0.0" width="145.66666666666666" height="65.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="creditcard" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="XyS-6U-3E5">
+                                                <rect key="frame" x="196.66666666666666" y="2" width="51" height="61.333333333333329"/>
+                                                <color key="tintColor" systemColor="systemBlueColor"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Cost:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R2s-Xj-Ppw">
+                                                <rect key="frame" x="247.66666666666663" y="0.0" width="145.33333333333337" height="65.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="tXd-bj-sIW" firstAttribute="width" secondItem="rq0-5Z-Xbq" secondAttribute="width" multiplier="0.13" id="41b-0w-aWI"/>
+                                            <constraint firstItem="LxY-x7-bVB" firstAttribute="width" secondItem="rq0-5Z-Xbq" secondAttribute="width" multiplier="0.37" id="GHN-uh-mv7"/>
+                                            <constraint firstItem="XyS-6U-3E5" firstAttribute="width" secondItem="rq0-5Z-Xbq" secondAttribute="width" multiplier="0.13" id="HSX-Ec-JyJ"/>
+                                        </constraints>
+                                    </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zdk-DG-UcH">
-                                        <rect key="frame" x="0.0" y="345.66666666666669" width="393" height="180.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="393" width="393" height="210"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="sQb-7F-r1x">
-                                                <rect key="frame" x="0.0" y="0.0" width="393" height="180.33333333333334"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="210"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="center" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hMc-73-4xO">
-                                                        <rect key="frame" x="0.0" y="0.0" width="393" height="90"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="393" height="105"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yj4-Vb-Dkq">
-                                                                <rect key="frame" x="0.0" y="0.0" width="98.333333333333329" height="90"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="98.333333333333329" height="105"/>
+                                                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title="Check Engine"/>
+                                                                <buttonConfiguration key="configuration" style="filled" image="engine.combustion" catalog="system">
+                                                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="checkEngineWarningAction:" destination="gmq-sw-fNR" eventType="touchUpInside" id="lXK-hu-tgh"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NBA-yF-r2o">
-                                                                <rect key="frame" x="98.333333333333343" y="0.0" width="98.333333333333343" height="90"/>
+                                                                <rect key="frame" x="98.333333333333343" y="0.0" width="98.333333333333343" height="105"/>
+                                                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title="Tire Pressure"/>
+                                                                <buttonConfiguration key="configuration" style="filled" image="exclamationmark.tirepressure" catalog="system">
+                                                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="tirePressureAction:" destination="gmq-sw-fNR" eventType="touchUpInside" id="jIW-rB-axS"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c3B-Xz-g6V">
-                                                                <rect key="frame" x="196.66666666666666" y="0.0" width="97.999999999999972" height="90"/>
+                                                                <rect key="frame" x="196.66666666666666" y="0.0" width="97.999999999999972" height="105"/>
+                                                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title="Battery"/>
+                                                                <buttonConfiguration key="configuration" style="filled" image="minus.plus.batteryblock.exclamationmark" catalog="system">
+                                                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="batteryAction:" destination="gmq-sw-fNR" eventType="touchUpInside" id="YPb-va-M3u"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2m-2E-Ji5">
-                                                                <rect key="frame" x="294.66666666666669" y="0.0" width="98.333333333333314" height="90"/>
+                                                                <rect key="frame" x="294.66666666666669" y="0.0" width="98.333333333333314" height="105"/>
+                                                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title="Brake Warning"/>
+                                                                <buttonConfiguration key="configuration" style="filled" image="exclamationmark.brakesignal" catalog="system">
+                                                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="brakeWarningAction:" destination="gmq-sw-fNR" eventType="touchUpInside" id="4K8-TV-JCE"/>
                                                                 </connections>
@@ -722,36 +767,52 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="center" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0vF-Hg-xoJ">
-                                                        <rect key="frame" x="0.0" y="89.999999999999943" width="393" height="90.333333333333314"/>
+                                                        <rect key="frame" x="0.0" y="105" width="393" height="105"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZvO-tU-mpd">
-                                                                <rect key="frame" x="0.0" y="0.0" width="98.333333333333329" height="90.333333333333329"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="98.333333333333329" height="105"/>
+                                                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title="ABS"/>
+                                                                <buttonConfiguration key="configuration" style="filled" image="abs.brakesignal" catalog="system">
+                                                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
                                                                 <connections>
-                                                                    <action selector="aBSAction:" destination="gmq-sw-fNR" eventType="touchUpInside" id="nn0-Nf-6a8"/>
+                                                                    <action selector="ABSAction:" destination="gmq-sw-fNR" eventType="touchUpInside" id="ok2-bb-IS6"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hgf-Kh-EoK">
-                                                                <rect key="frame" x="98.333333333333343" y="0.0" width="98.333333333333343" height="90.333333333333329"/>
+                                                                <rect key="frame" x="98.333333333333343" y="0.0" width="98.333333333333343" height="105"/>
+                                                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title="Oil"/>
+                                                                <buttonConfiguration key="configuration" style="filled" image="oilcan" catalog="system">
+                                                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="oilAction:" destination="gmq-sw-fNR" eventType="touchUpInside" id="Euf-rc-hWT"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67D-3O-Ntz">
-                                                                <rect key="frame" x="196.66666666666666" y="0.0" width="97.999999999999972" height="90.333333333333329"/>
+                                                                <rect key="frame" x="196.66666666666666" y="0.0" width="97.999999999999972" height="105"/>
+                                                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title="Airbag"/>
+                                                                <buttonConfiguration key="configuration" style="filled" image="figure.seated.side.left.airbag.on" catalog="system">
+                                                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="airbagAction:" destination="gmq-sw-fNR" eventType="touchUpInside" id="yJg-BA-4xF"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cuC-Ds-rcG">
-                                                                <rect key="frame" x="294.66666666666669" y="0.0" width="98.333333333333314" height="90.333333333333329"/>
+                                                                <rect key="frame" x="294.66666666666669" y="0.0" width="98.333333333333314" height="105"/>
+                                                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title="Traction Control"/>
+                                                                <buttonConfiguration key="configuration" style="filled" image="traction.control.tirepressure.exclamationmark" catalog="system">
+                                                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="tractionControlAction:" destination="gmq-sw-fNR" eventType="touchUpInside" id="LE9-pc-OGc"/>
                                                                 </connections>
@@ -769,43 +830,12 @@
                                             <constraint firstAttribute="trailing" secondItem="sQb-7F-r1x" secondAttribute="trailing" id="thT-f8-mhw"/>
                                         </constraints>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rq0-5Z-Xbq">
-                                        <rect key="frame" x="0.0" y="532" width="393" height="65"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="engine.combustion" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="tXd-bj-sIW">
-                                                <rect key="frame" x="0.0" y="1.6666666666666643" width="51" height="61.999999999999993"/>
-                                                <color key="tintColor" systemColor="systemOrangeColor"/>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Odometer:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LxY-x7-bVB">
-                                                <rect key="frame" x="51" y="0.0" width="145.66666666666666" height="65"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="creditcard" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="XyS-6U-3E5">
-                                                <rect key="frame" x="196.66666666666666" y="2" width="51" height="61"/>
-                                                <color key="tintColor" systemColor="systemBlueColor"/>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Cost:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R2s-Xj-Ppw">
-                                                <rect key="frame" x="247.66666666666663" y="0.0" width="145.33333333333337" height="65"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="tXd-bj-sIW" firstAttribute="width" secondItem="rq0-5Z-Xbq" secondAttribute="width" multiplier="0.13" id="41b-0w-aWI"/>
-                                            <constraint firstItem="LxY-x7-bVB" firstAttribute="width" secondItem="rq0-5Z-Xbq" secondAttribute="width" multiplier="0.37" id="GHN-uh-mv7"/>
-                                            <constraint firstItem="XyS-6U-3E5" firstAttribute="width" secondItem="rq0-5Z-Xbq" secondAttribute="width" multiplier="0.13" id="HSX-Ec-JyJ"/>
-                                        </constraints>
-                                    </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tot-O7-kf5">
                                         <rect key="frame" x="0.0" y="603" width="393" height="49"/>
-                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" image="gear" catalog="system">
-                                            <color key="baseBackgroundColor" name="AccentColor"/>
-                                        </buttonConfiguration>
+                                        <buttonConfiguration key="configuration" style="filled" image="gear" catalog="system"/>
                                         <connections>
                                             <segue destination="J0j-Uc-y4B" kind="show" id="OzK-53-mcz"/>
                                         </connections>
@@ -831,10 +861,18 @@
                     <tabBarItem key="tabBarItem" title="Overview" image="book.fill" catalog="system" id="gin-8s-158"/>
                     <navigationItem key="navigationItem" id="BX9-oh-CsC"/>
                     <connections>
+                        <outlet property="ABSWarningButton" destination="ZvO-tU-mpd" id="46w-4M-Geq"/>
+                        <outlet property="airbagWarningButton" destination="67D-3O-Ntz" id="2Wt-HK-mP8"/>
+                        <outlet property="batteryWarningButton" destination="c3B-Xz-g6V" id="UdY-uZ-Ros"/>
+                        <outlet property="brakeWarningButton" destination="t2m-2E-Ji5" id="vFk-9N-sTg"/>
                         <outlet property="carLabel" destination="1ka-on-Sm2" id="p63-lE-a5c"/>
+                        <outlet property="checkEngineButton" destination="Yj4-Vb-Dkq" id="Par-BR-1as"/>
                         <outlet property="odometerLabel" destination="LxY-x7-bVB" id="yUE-fU-kyd"/>
+                        <outlet property="oilWarningButton" destination="Hgf-Kh-EoK" id="bF8-hy-W3V"/>
                         <outlet property="recentJobsLabel" destination="KxC-JV-M5P" id="x1z-aS-Pus"/>
                         <outlet property="tableView" destination="MPq-E7-mqH" id="XxB-Rc-HFz"/>
+                        <outlet property="tcWarningButton" destination="cuC-Ds-rcG" id="Ii8-8o-6el"/>
+                        <outlet property="tirePressureButton" destination="NBA-yF-r2o" id="yqi-xr-7IG"/>
                         <outlet property="totalCostLabel" destination="R2s-Xj-Ppw" id="H9j-HR-grn"/>
                     </connections>
                 </viewController>
@@ -1209,6 +1247,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="abs.brakesignal" catalog="system" width="128" height="87"/>
         <image name="book.fill" catalog="system" width="128" height="95"/>
         <image name="calendar" catalog="system" width="128" height="107"/>
         <image name="camera.fill" catalog="system" width="128" height="93"/>
@@ -1219,14 +1258,16 @@
         <image name="creditcard" catalog="system" width="128" height="88"/>
         <image name="engine.combustion" catalog="system" width="128" height="79"/>
         <image name="engine.combustion.fill" catalog="system" width="128" height="80"/>
+        <image name="exclamationmark.brakesignal" catalog="system" width="128" height="87"/>
+        <image name="exclamationmark.tirepressure" catalog="system" width="128" height="121"/>
+        <image name="figure.seated.side.left.airbag.on" catalog="system" width="128" height="119"/>
         <image name="fuelpump" catalog="system" width="128" height="125"/>
         <image name="gear" catalog="system" width="128" height="122"/>
+        <image name="minus.plus.batteryblock.exclamationmark" catalog="system" width="128" height="106"/>
         <image name="oilcan" catalog="system" width="128" height="58"/>
         <image name="photo.fill" catalog="system" width="128" height="93"/>
+        <image name="traction.control.tirepressure.exclamationmark" catalog="system" width="128" height="94"/>
         <image name="trash.fill" catalog="system" width="117" height="128"/>
-        <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
