@@ -95,8 +95,8 @@
 		E79DDDB62CD2600100D8ECA7 = {
 			isa = PBXGroup;
 			children = (
-				FA619BE62CEF757F003B8089 /* SettingsViewController.swift */,
 				E782FE7B2CD928D700C88A75 /* FuelGradeEditorViewController.swift */,
+				FA619BE62CEF757F003B8089 /* SettingsViewController.swift */,
 				E79DDDC12CD2600100D8ECA7 /* usefulAppMcCain */,
 				E79DDDDB2CD2600300D8ECA7 /* usefulAppMcCainTests */,
 				E79DDDE52CD2600300D8ECA7 /* usefulAppMcCainUITests */,

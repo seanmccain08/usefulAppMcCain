@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2b9-bs-RN2">
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -111,7 +112,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Niu-Od-k2I" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="7zb-ia-TqE"/>
                             <constraint firstItem="Niu-Od-k2I" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="QpL-K1-5lN"/>
@@ -214,7 +215,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cuA-IM-74T"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="J0m-VN-7p4" firstAttribute="top" secondItem="lGS-gU-MRU" secondAttribute="bottom" constant="8" symbolic="YES" id="40a-wz-2X3"/>
                             <constraint firstItem="cuA-IM-74T" firstAttribute="bottom" secondItem="J0m-VN-7p4" secondAttribute="bottom" constant="270" id="8Cg-oI-oJI"/>
@@ -1245,27 +1246,27 @@
         </scene>
     </scenes>
     <resources>
-        <image name="abs.brakesignal" catalog="system" width="32" height="32"/>
-        <image name="book.fill" catalog="system" width="32" height="32"/>
-        <image name="calendar" catalog="system" width="32" height="32"/>
-        <image name="camera.fill" catalog="system" width="32" height="32"/>
-        <image name="car" catalog="system" width="32" height="32"/>
-        <image name="car.fill" catalog="system" width="32" height="32"/>
-        <image name="case" catalog="system" width="32" height="32"/>
-        <image name="case.fill" catalog="system" width="32" height="32"/>
-        <image name="creditcard" catalog="system" width="32" height="32"/>
-        <image name="engine.combustion" catalog="system" width="32" height="32"/>
-        <image name="engine.combustion.fill" catalog="system" width="32" height="32"/>
-        <image name="exclamationmark.brakesignal" catalog="system" width="32" height="32"/>
-        <image name="exclamationmark.tirepressure" catalog="system" width="32" height="32"/>
-        <image name="figure.seated.side.left.airbag.on" catalog="system" width="32" height="32"/>
-        <image name="fuelpump" catalog="system" width="32" height="32"/>
-        <image name="gear" catalog="system" width="32" height="32"/>
-        <image name="minus.plus.batteryblock.exclamationmark" catalog="system" width="32" height="32"/>
-        <image name="oilcan" catalog="system" width="32" height="32"/>
-        <image name="photo.fill" catalog="system" width="32" height="32"/>
-        <image name="traction.control.tirepressure.exclamationmark" catalog="system" width="32" height="32"/>
-        <image name="trash.fill" catalog="system" width="32" height="32"/>
+        <image name="abs.brakesignal" catalog="system" width="128" height="87"/>
+        <image name="book.fill" catalog="system" width="128" height="95"/>
+        <image name="calendar" catalog="system" width="128" height="107"/>
+        <image name="camera.fill" catalog="system" width="128" height="93"/>
+        <image name="car" catalog="system" width="128" height="95"/>
+        <image name="car.fill" catalog="system" width="128" height="95"/>
+        <image name="case" catalog="system" width="128" height="100"/>
+        <image name="case.fill" catalog="system" width="128" height="100"/>
+        <image name="creditcard" catalog="system" width="128" height="88"/>
+        <image name="engine.combustion" catalog="system" width="128" height="79"/>
+        <image name="engine.combustion.fill" catalog="system" width="128" height="80"/>
+        <image name="exclamationmark.brakesignal" catalog="system" width="128" height="87"/>
+        <image name="exclamationmark.tirepressure" catalog="system" width="128" height="121"/>
+        <image name="figure.seated.side.left.airbag.on" catalog="system" width="128" height="119"/>
+        <image name="fuelpump" catalog="system" width="128" height="125"/>
+        <image name="gear" catalog="system" width="128" height="122"/>
+        <image name="minus.plus.batteryblock.exclamationmark" catalog="system" width="128" height="106"/>
+        <image name="oilcan" catalog="system" width="128" height="58"/>
+        <image name="photo.fill" catalog="system" width="128" height="93"/>
+        <image name="traction.control.tirepressure.exclamationmark" catalog="system" width="128" height="94"/>
+        <image name="trash.fill" catalog="system" width="117" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
