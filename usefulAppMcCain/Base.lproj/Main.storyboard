@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2b9-bs-RN2">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -377,7 +375,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bbc-xq-uJC"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Bbc-xq-uJC" firstAttribute="bottom" secondItem="uM0-VO-tIA" secondAttribute="bottom" id="3u7-Ma-tpt"/>
                             <constraint firstItem="Bbc-xq-uJC" firstAttribute="trailing" secondItem="uM0-VO-tIA" secondAttribute="trailing" id="Hmc-DC-GSu"/>
@@ -1247,41 +1245,41 @@
         </scene>
     </scenes>
     <resources>
-        <image name="abs.brakesignal" catalog="system" width="128" height="87"/>
-        <image name="book.fill" catalog="system" width="128" height="95"/>
-        <image name="calendar" catalog="system" width="128" height="107"/>
-        <image name="camera.fill" catalog="system" width="128" height="93"/>
-        <image name="car" catalog="system" width="128" height="95"/>
-        <image name="car.fill" catalog="system" width="128" height="95"/>
-        <image name="case" catalog="system" width="128" height="100"/>
-        <image name="case.fill" catalog="system" width="128" height="100"/>
-        <image name="creditcard" catalog="system" width="128" height="88"/>
-        <image name="engine.combustion" catalog="system" width="128" height="79"/>
-        <image name="engine.combustion.fill" catalog="system" width="128" height="80"/>
-        <image name="exclamationmark.brakesignal" catalog="system" width="128" height="87"/>
-        <image name="exclamationmark.tirepressure" catalog="system" width="128" height="121"/>
-        <image name="figure.seated.side.left.airbag.on" catalog="system" width="128" height="119"/>
-        <image name="fuelpump" catalog="system" width="128" height="125"/>
-        <image name="gear" catalog="system" width="128" height="122"/>
-        <image name="minus.plus.batteryblock.exclamationmark" catalog="system" width="128" height="106"/>
-        <image name="oilcan" catalog="system" width="128" height="58"/>
-        <image name="photo.fill" catalog="system" width="128" height="93"/>
-        <image name="traction.control.tirepressure.exclamationmark" catalog="system" width="128" height="94"/>
-        <image name="trash.fill" catalog="system" width="117" height="128"/>
+        <image name="abs.brakesignal" catalog="system" width="32" height="32"/>
+        <image name="book.fill" catalog="system" width="32" height="32"/>
+        <image name="calendar" catalog="system" width="32" height="32"/>
+        <image name="camera.fill" catalog="system" width="32" height="32"/>
+        <image name="car" catalog="system" width="32" height="32"/>
+        <image name="car.fill" catalog="system" width="32" height="32"/>
+        <image name="case" catalog="system" width="32" height="32"/>
+        <image name="case.fill" catalog="system" width="32" height="32"/>
+        <image name="creditcard" catalog="system" width="32" height="32"/>
+        <image name="engine.combustion" catalog="system" width="32" height="32"/>
+        <image name="engine.combustion.fill" catalog="system" width="32" height="32"/>
+        <image name="exclamationmark.brakesignal" catalog="system" width="32" height="32"/>
+        <image name="exclamationmark.tirepressure" catalog="system" width="32" height="32"/>
+        <image name="figure.seated.side.left.airbag.on" catalog="system" width="32" height="32"/>
+        <image name="fuelpump" catalog="system" width="32" height="32"/>
+        <image name="gear" catalog="system" width="32" height="32"/>
+        <image name="minus.plus.batteryblock.exclamationmark" catalog="system" width="32" height="32"/>
+        <image name="oilcan" catalog="system" width="32" height="32"/>
+        <image name="photo.fill" catalog="system" width="32" height="32"/>
+        <image name="traction.control.tirepressure.exclamationmark" catalog="system" width="32" height="32"/>
+        <image name="trash.fill" catalog="system" width="32" height="32"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

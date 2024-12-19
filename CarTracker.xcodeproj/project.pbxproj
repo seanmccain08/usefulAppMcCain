@@ -208,7 +208,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E79DDDBA2CD2600100D8ECA7 /* Build configuration list for PBXProject "usefulAppMcCain" */;
+			buildConfigurationList = E79DDDBA2CD2600100D8ECA7 /* Build configuration list for PBXProject "CarTracker" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -303,18 +303,21 @@
 				DEVELOPMENT_TEAM = 2U9LG3V72B;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = usefulAppMcCain/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Car Tracker";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = clc.usefulAppMcCain;
+				PRODUCT_BUNDLE_IDENTIFIER = clc.carTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -332,18 +335,21 @@
 				DEVELOPMENT_TEAM = 2U9LG3V72B;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = usefulAppMcCain/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Car Tracker";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = clc.usefulAppMcCain;
+				PRODUCT_BUNDLE_IDENTIFIER = clc.carTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -545,7 +551,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E79DDDBA2CD2600100D8ECA7 /* Build configuration list for PBXProject "usefulAppMcCain" */ = {
+		E79DDDBA2CD2600100D8ECA7 /* Build configuration list for PBXProject "CarTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E79DDDEE2CD2600300D8ECA7 /* Debug */,

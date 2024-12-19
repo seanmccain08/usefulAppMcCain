@@ -80,7 +80,7 @@ public class AppData {
     static var currentCar = cars[0]
     static var backGroundcolor = UIColor.white
     static var textColor = UIColor.black
-    static var bgColorString = "System"
+    static var bgColorString = "system"
     static var image : UIImage!
     
 }
